@@ -1,0 +1,33 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1">wpcf7_contact_form</custom-type>
+        <custom-type translate="1">tt-portfolio</custom-type>
+        <custom-type translate="1">tt-team</custom-type>
+        <custom-type translate="1">vc_grid_item</custom-type>
+    </custom-types>
+    <taxonomies>
+       <taxonomy translate="1">tt-portfolio-cat</taxonomy>
+       <taxonomy translate="1">tt-team-cat</taxonomy>
+    </taxonomies>
+    <custom-fields>
+        <custom-field action="translate">maacuni_qoute</custom-field>
+        <custom-field action="translate">maacuni_qoute_author</custom-field>
+        <custom-field action="translate">maacuni_link_text</custom-field>
+        <custom-field action="translate">maacuni_link_title</custom-field>
+        <custom-field action="translate">maacuni_portfolio_info</custom-field>
+        <custom-field action="translate">maacuni_portfolio_role</custom-field>
+        <custom-field action="translate">maacuni_year</custom-field>
+        <custom-field action="translate">maacuni_team_designation</custom-field>
+        <custom-field action="copy">tt_post_views_count</custom-field>
+    </custom-fields>
+    <admin-texts>
+        <key name="maacuni_theme_option">
+            <key name="prefix-title"/>
+            <key name="header-contact"/>
+            <key name="header-sidebar-title"/>
+            <key name="text-logo"/>
+            <key name="blog-title"/>
+            <key name="footer-text"/>
+        </key>
+    </admin-texts>
+</wpml-config>
