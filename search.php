@@ -3,9 +3,9 @@
 endif;
 
 get_header();
-	$blog_column = maacuni_option('blog-column', false, 1);
-	$blog_sidebar = maacuni_option('blog-sidebar', false, 'right-sidebar');
-	$blog_page_header = maacuni_option('blog-page-header', false, true);
+	$blog_column = habib_option('blog-column', false, 1);
+	$blog_sidebar = habib_option('blog-sidebar', false, 'right-sidebar');
+	$blog_page_header = habib_option('blog-page-header', false, true);
 	$grid_column = 'col-12';
 	
 	if ($blog_sidebar != 'no-sidebar') :
@@ -38,10 +38,10 @@ get_header();
 
 						<?php endwhile; ?>
 
-						<?php if ( maacuni_option( 'blog-page-nav', false, true ) ) {
-							echo maacuni_posts_pagination();
+						<?php if ( habib_option( 'blog-page-nav', false, true ) ) {
+							echo habib_posts_pagination();
 						} else {
-							maacuni_posts_navigation();
+							habib_posts_navigation();
 						} ?>
 
 					<?php else : ?>

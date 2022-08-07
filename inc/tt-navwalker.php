@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) :
     exit; // Exit if accessed directly
 endif;
 
-class Maacuni_Navwalker extends Walker_Nav_Menu {
+class habib_Navwalker extends Walker_Nav_Menu {
     
     private $megamenuId;
     private $megamenu_container;

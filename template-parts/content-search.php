@@ -8,7 +8,7 @@ endif; ?>
 	<div class="entry-content blog-search">
 		<div class="entry-header">
 			<div class="entry-meta">
-				<?php maacuni_post_meta(); ?>
+				<?php habib_post_meta(); ?>
 			</div><!-- .entry-meta -->
 
 			<?php if ( is_single() ) :
@@ -48,8 +48,8 @@ endif; ?>
 		    </div> <!-- .post-tags -->
 
 		    <?php 
-				if(function_exists('maacuni_blog_post_share')) {
-					maacuni_blog_post_share();
+				if(function_exists('habib_blog_post_share')) {
+					habib_blog_post_share();
 				}
 			?>
 		</footer>

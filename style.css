@@ -399,7 +399,7 @@ body:not(.single-post) .post-content > blockquote:last-child{
     .single-post.header-left-menu .entry-content .alignfull {
         margin-left: calc( -100vw / 2 + 100% / 2 - -58px);
         margin-right: calc( -100vw / 2 + 100% / 2 - -58px);
-    }    
+    }
     .single-post .creative .entry-content .alignfull {
         margin-left: calc( -100vw / 2 + 75% / 2);
         margin-right: calc( -100vw / 2 + 50% / 2);
@@ -535,7 +535,7 @@ body:not(.single-post) .post-content > blockquote:last-child{
 .blog .wp-block-column:not(:last-child) {
     margin-right: 15px;
 }
-.wp-block-column:not(:first-child), 
+.wp-block-column:not(:first-child),
 .wp-block-column:nth-child(2n) {
     margin-left: 15px;
 }
@@ -618,7 +618,7 @@ body:not(.single-post) .post-content > blockquote:last-child{
     overflow: hidden;
 }
 .wp-block-latest-comments{
-    padding-left: 0; 
+    padding-left: 0;
 }
 .wp-block-latest-comments li {
     padding-bottom: 20px;
@@ -690,7 +690,7 @@ body:not(.single-post) .post-content > blockquote:last-child{
     }
 }
 
-.has-huge-font-size, 
+.has-huge-font-size,
 .has-large-font-size,
 .has-larger-font-size{
     line-height: 1.5;
@@ -1146,7 +1146,7 @@ blockquote[style*="text-align:right"] {
     padding: 15px 10px 15px 20px;
     font-size: 20px;
 }
-.wp-block-quote.is-large p, 
+.wp-block-quote.is-large p,
 .wp-block-quote.is-style-large p,
 .wp-block-pullquote p,
 .wp-block-pullquote.is-style-solid-color blockquote p{
@@ -1179,9 +1179,9 @@ blockquote cite:before {
     height: 1px;
     background-color: #212121;
 }
-.wp-block-quote.is-large cite, 
-.wp-block-quote.is-large footer, 
-.wp-block-quote.is-style-large cite, 
+.wp-block-quote.is-large cite,
+.wp-block-quote.is-large footer,
+.wp-block-quote.is-style-large cite,
 .wp-block-quote.is-style-large footer{
     font-size: 16px;
 }
@@ -1200,7 +1200,7 @@ blockquote cite:before {
     margin: 0;
     border: 0;
 }
-.wp-block-pullquote cite, 
+.wp-block-pullquote cite,
 .wp-block-pullquote footer {
     font-style: normal;
 }
@@ -1363,7 +1363,7 @@ table a {
     z-index: 1;
     overflow: hidden;
 }
-.btn:before, 
+.btn:before,
 .btn:after,
 .vc_general.vc_btn3:before,
 .vc_general.vc_btn3:after,
@@ -1406,7 +1406,7 @@ table a {
     -webkit-transition-delay: .2s;
             transition-delay: .2s;
 }
-.btn:hover:before, 
+.btn:hover:before,
 .btn:hover:after,
 .vc_general.vc_btn3:hover:before,
 .vc_general.vc_btn3:hover:after,
@@ -1561,7 +1561,7 @@ table a {
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     background-color: #f26343;
-    
+
 }
 .btn-creative:hover:after{
     -webkit-transform: scaleX(1);
@@ -1801,7 +1801,7 @@ body.body-bg-blue-light.bottom-to-top-overlay .page-header-section .page-header 
 }
 .standard-menu .navbar .container{
     position: relative;
-} 
+}
 .navbar {
         background-color: #152230;
 }
@@ -2148,8 +2148,8 @@ body.body-bg-blue-light.bottom-to-top-overlay .page-header-section .page-header 
 .navbar .side .navbar-nav li a{
     color: #ffffff;
 }
-.side .navbar-nav li.current-menu-ancestor>a, 
-.side .navbar-nav li.current-menu-parent>a, 
+.side .navbar-nav li.current-menu-ancestor>a,
+.side .navbar-nav li.current-menu-parent>a,
 .side .navbar-nav li.current-menu-item>a {
     font-weight: bold;
 }
@@ -2574,7 +2574,7 @@ body.body-bg-blue-light.bottom-to-top-overlay .page-header-section .page-header 
     height: 100%;
     width: 1px;
     background-color: #fff;
-    opacity: .2; 
+    opacity: .2;
 }
 .menu-trigger{
     color: #fff;
@@ -2750,7 +2750,7 @@ body.body-bg-blue-light.bottom-to-top-overlay .page-header-section .page-header 
 .menu-wrapper .navbar-nav li .megamenu-wrapper .menu-dropdown{
     background-color: transparent;
 }
-.menu-wrapper .navbar-nav li .dropdown-wrapper .menu-dropdown li a, 
+.menu-wrapper .navbar-nav li .dropdown-wrapper .menu-dropdown li a,
 .menu-wrapper .navbar-nav li .megamenu-wrapper .menu-dropdown li a {
     font-size: 24px;
     line-height: 35px;
@@ -2983,7 +2983,7 @@ body.body-bg-blue-light.bottom-to-top-overlay .page-header-section .page-header 
         padding: 15px 0;
         display: block;
     }
-    
+
     .menu-wrapper .navbar-nav > li.dropdown:before{
         display: none;
     }
@@ -2996,11 +2996,11 @@ body.body-bg-blue-light.bottom-to-top-overlay .page-header-section .page-header 
         border: 0;
         padding-left: 10px;
     }
-    .navbar-nav>li .dropdown-wrapper li.menu-collapsed>.dropdown-wrapper>ul, 
-    .navbar-nav>li .megamenu-wrapper li.menu-collapsed>.dropdown-wrapper>ul, 
-    .navbar-nav>li.dropdown.menu-collapsed>.dropdown-wrapper>ul, 
+    .navbar-nav>li .dropdown-wrapper li.menu-collapsed>.dropdown-wrapper>ul,
+    .navbar-nav>li .megamenu-wrapper li.menu-collapsed>.dropdown-wrapper>ul,
+    .navbar-nav>li.dropdown.menu-collapsed>.dropdown-wrapper>ul,
     .navbar-nav>li.dropdown.menu-collapsed>.megamenu-wrapper>ul,
-    .navbar-nav li.menu-collapsed>.megamenu-wrapper, 
+    .navbar-nav li.menu-collapsed>.megamenu-wrapper,
     .navbar-nav li.menu-collapsed>.megamenu-wrapper .dropdown-wrapper {
         position: static;
         float: none;
@@ -3238,12 +3238,12 @@ body.on-side {
 .side a,
 .side .entry-meta a,
 .side .entry-meta li {
-    color: rgba(255, 255, 255, .8) 
+    color: rgba(255, 255, 255, .8)
 }
 .side a:hover,
 .side .tt-latest-post .media-body a:hover,
 .side .entry-meta a:hover {
-    color: rgba(255, 255, 255, .7) 
+    color: rgba(255, 255, 255, .7)
 }
 .side .entry-meta a {
     font-size: 12px !important;
@@ -4179,7 +4179,7 @@ article.is-sticky-post .post-thumbnail {
 .archive .blog-wrapper,
 .blog .blog-wrapper,
 .blog .footer-onepage-wrapper,
-.search .footer-onepage-wrapper, 
+.search .footer-onepage-wrapper,
 .archive .footer-onepage-wrapper {
     background-color: #e9edf0;
 }
@@ -4240,7 +4240,7 @@ article.is-sticky-post .post-thumbnail {
     margin-bottom: 15px;
 }
 .has-single-sidebar .blog-wrapper .post-thumbnail{
-    
+
 }
 .has-single-sidebar .blog-wrapper .is-sticky-post .post-thumbnail{
     margin-bottom: 0;
@@ -7419,7 +7419,7 @@ div.wpcf7 .wpcf7-ttradio label {
     }
     .tt-load-animation-wrapper.tt-animated{
         right: 0;
-        left: auto; 
+        left: auto;
         background-color: rgba(255, 255, 255, 0.9);
         z-index: 99997;
         -webkit-animation: ttHide 1s .2s linear forwards;
@@ -7433,7 +7433,7 @@ div.wpcf7 .wpcf7-ttradio label {
         100%{
             left: 100%;
         }
-    } 
+    }
     @keyframes ttLoaderAnimation{
         0%{
             left: -100%;
@@ -7680,7 +7680,7 @@ body.error404{
     text-transform: capitalize;
     margin-top: 40px;
 }
-  
+
 @media (max-width: 767px) {
     .not-found-icon {
         margin-bottom: 30px;
@@ -9651,7 +9651,7 @@ div.pp_woocommerce .pp_close:before {
 
 
 /*===================================================================
-                    ALL SHORTCODE STYLE 
+                    ALL SHORTCODE STYLE
 =====================================================================*/
 
 
@@ -11376,7 +11376,7 @@ div.pp_woocommerce .pp_close:before {
     font-family: 'Fira Sans', sans-serif;
     font-size: 25px;
     line-height: 2;
-    
+
     -ms-flex-preferred-size: 750px;
     flex-basis: 750px;
     -webkit-transition: all 400ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
@@ -12400,7 +12400,7 @@ ul.fullscreen-menu li:hover .thumb {
     color: #ffffff;
 }
 .tt-contact-popup a.times i:before{
-    content: "\f00d"; 
+    content: "\f00d";
 }
 .tt-contact-popup .contact-form {
     max-width: 440px;
@@ -12419,7 +12419,7 @@ ul.fullscreen-menu li:hover .thumb {
             transform-origin: right bottom;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-   
+
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     visibility: hidden;
@@ -12521,7 +12521,7 @@ ul.fullscreen-menu li:hover .thumb {
 .tt-contact-popup.white .wpcf7-ttradio span.ttradio-title:hover{
     color: #ffffff !important;
 }
-.tt-contact-popup.white .wpcf7 p, 
+.tt-contact-popup.white .wpcf7 p,
 .tt-contact-popup.white div.wpcf7 label{
     color: #212121;
 }
@@ -12563,7 +12563,7 @@ ul.fullscreen-menu li:hover .thumb {
 .tt-contact-popup.blue .wpcf7-ttradio span.ttradio-title:hover{
     color: #ffffff !important;
 }
-.tt-contact-popup.blue .wpcf7 p, 
+.tt-contact-popup.blue .wpcf7 p,
 .tt-contact-popup.blue div.wpcf7 label{
     color: #ffffff;
 }
@@ -12653,7 +12653,7 @@ ul.fullscreen-menu li:hover .thumb {
 .tt-portfolio-grid .portfolio-inner .portfolio-thumb {
     overflow: hidden;
     position: relative;
-    height: 100%; 
+    height: 100%;
 }
 .tt-portfolio-grid .portfolio-inner .portfolio-thumb img {
     -webkit-transition: all 2s cubic-bezier(.08, .43, .24, 1);
@@ -12694,7 +12694,7 @@ ul.fullscreen-menu li:hover .thumb {
 @keyframes ttImageMove {
     0%, 100%{
         background-position: center center;
-    } 
+    }
     33%{
         background-position: center top;
     }
@@ -12705,7 +12705,7 @@ ul.fullscreen-menu li:hover .thumb {
 @-webkit-keyframes ttImageMove {
     0%, 100%{
         background-position: center center;
-    } 
+    }
     33%{
         background-position: center top;
     }
@@ -13156,7 +13156,7 @@ ul.fullscreen-menu li:hover .thumb {
 }
 .tt-portfolio-slider .swiper-slide .content-inner a span:hover {
     box-shadow: 0px 24px 62px 0px rgba(0, 0, 0, .2) !important;
-    
+
 }
 .tt-portfolio-slider .swiper-slide .content-inner {
     display: -ms-flexbox !important;
@@ -13232,7 +13232,7 @@ ul.fullscreen-menu li:hover .thumb {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
-.tt-portfolio-slider .swiper-slide .slider-content .swiper-nav .swiper-button-prev.swiper-button-disabled, 
+.tt-portfolio-slider .swiper-slide .slider-content .swiper-nav .swiper-button-prev.swiper-button-disabled,
 .tt-portfolio-slider .swiper-slide .slider-content .swiper-nav .swiper-button-next.swiper-button-disabled {
     color: #fff;
     opacity: .5;
@@ -13828,7 +13828,7 @@ ul.fullscreen-menu li:hover .thumb {
                     // ALL SHORTCODE STYLE END //
 ========================================================================*/
 
-/*================== OVERLAY BACKGROUND ===============*/ 
+/*================== OVERLAY BACKGROUND ===============*/
 
 .violet-overlay {
     background-color: rgba(174, 0, 255, .7);
@@ -14421,7 +14421,7 @@ ul.fullscreen-menu li:hover .thumb {
         left: 100%;
         top: 0;
     }
-    
+
 }
 @-webkit-keyframes ie_overlaytwo {
     0% {
@@ -14432,7 +14432,7 @@ ul.fullscreen-menu li:hover .thumb {
         left: 100%;
         top: 0;
     }
-    
+
 }
 
 

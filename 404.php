@@ -2,7 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) :
     exit; // Exit if accessed directly
 endif;
-$image404 = maacuni_option('img-404', 'url');
+$image404 = habib_option('img-404', 'url');
 
 get_header(); ?>
 <div class="error-page-wrapper">

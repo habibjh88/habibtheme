@@ -27,54 +27,31 @@ if ( is_single() ) {
         <div class="post-thumbnail">
             <?php the_post_thumbnail( $thumb_size ); ?>
             <div class="overlay"></div>
-            <div class="portfolio-info">
-                <?php if ( $cline_name ) : ?>
-                    <p><strong>Author: </strong>
-                        <?php
-                        echo wp_kses( $cline_name, array(
-                            'a' => array(
-                                'href'   => array(),
-                                'title'  => array(),
-                                'target' => array()
-                            )
-                        ) );
-                        ?>
-                    </p>
+            <p class="visit-link">
+                <?php if ( $live_link ) : ?>
+                    <a class="bg-danger" href="<?php echo esc_url( $live_link ); ?>" target="_blank">Live Link</a>
                 <?php endif; ?>
 
-                <?php if ( $role ) : ?>
-                    <p>
-                        <strong>Role: </strong> <?php echo esc_html( $role ); ?>
-                    </p>
+                <?php if ( $themeforest_link ) : ?>
+                    <a class="bg-success" href="<?php echo esc_url( $themeforest_link ); ?>" target="_blank">ThemeForest Link</a>
                 <?php endif; ?>
 
-                <p class="visit-link">
-                    <strong>Visit: </strong>
-                    <?php if ( $live_link ) : ?>
-                        <a href="<?php echo esc_url( $live_link ); ?>" target="_blank">Live Preview</a>
-                    <?php endif; ?>
-
-                    <?php if ( $themeforest_link ) : ?>
-                        <a href="<?php echo esc_url( $themeforest_link ); ?>" target="_blank">Themeforest</a>
-                    <?php endif; ?>
-
-                    <?php if ( $dev_link ) : ?>
-                        <a href="<?php echo esc_url( $dev_link ); ?>" target="_blank">Development Site</a>
-                    <?php endif; ?>
-                </p>
-
-                <?php if ( $description ) : ?>
-                    <p class="d-none d-md-block"><strong>Desc:</strong>
-                        <?php echo wp_kses( $description, array(
-                            'a' => array(
-                                'href'   => array(),
-                                'title'  => array(),
-                                'target' => array()
-                            )
-                        ) );
-                        ?> </p>
+                <?php if ( $dev_link ) : ?>
+                    <a class="bg-dark" href="<?php echo esc_url( $dev_link ); ?>" target="_blank">Development Link</a>
                 <?php endif; ?>
-            </div>
+            </p>
+
+            <?php if ( $description ) : ?>
+                <div class="description">
+                    <?php echo wp_kses( $description, array(
+                        'a' => array(
+                            'href'   => array(),
+                            'title'  => array(),
+                            'target' => array()
+                        )
+                    ) );
+                    ?> </div>
+            <?php endif; ?>
         </div>
 
     <?php endif; ?>
@@ -92,6 +69,34 @@ if ( is_single() ) {
                     <span class="developing">Developing...</span>
                 <?php endif; ?>
             </h2>
+
+            <div class="portfolio-info">
+                <?php if ( $cline_name ) : ?>
+                    <p><strong>Author: </strong>
+                        <?php
+                        echo wp_kses( $cline_name, array(
+                            'a' => array(
+                                'href'   => array(),
+                                'title'  => array(),
+                                'target' => array()
+                            )
+                        ) );
+                        ?>
+                    </p>
+                <?php endif; ?>
+
+                <?php if ( $role ) : ?>
+                    <p class="my-role">
+                        <strong>My Role: </strong>
+                        <span class="text-danger"><?php echo esc_html( $role ); ?></span>
+                    </p>
+                <?php endif; ?>
+
+
+
+
+            </div>
+
         </div>
     </div>
 </article><!-- #post-## -->

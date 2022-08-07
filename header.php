@@ -14,8 +14,8 @@ endif; ?>
 
 <body id="home" <?php body_class(); ?> data-spy="scroll" data-target=".navbar" data-offset="100">
 
-    <?php if (maacuni_option('page-preloader', false, true)) : ?>
-        <div id="preloader" style="background-color: <?php echo esc_attr(maacuni_option('loader-bg-color', false, '#ffffff'));?>">
+    <?php if (habib_option('page-preloader', false, true)) : ?>
+        <div id="preloader" style="background-color: <?php echo esc_attr(habib_option('loader-bg-color', false, '#ffffff'));?>">
             <div id="status">
                 <span></span>
                 <span></span>
@@ -28,7 +28,7 @@ endif; ?>
         </div>
 
         <?php 
-            $tt_load_bg = maacuni_option('preloader-slider-bg', false, '#101a87');
+            $tt_load_bg = habib_option('preloader-slider-bg', false, '#101a87');
             if($tt_load_bg){
                 $tt_load_bg = 'background-color:'. $tt_load_bg.';';
             }
@@ -39,14 +39,14 @@ endif; ?>
     
     <div class="site-wrapper">
 
-        <?php do_action('maacuni_before_site_wrapper'); ?>
+        <?php do_action('habib_before_site_wrapper'); ?>
 
         <?php 
-        $tt_header_style = maacuni_option('header-style', false, 'header-default');
+        $tt_header_style = habib_option('header-style', false, 'header-default');
 
         $page_header = "";
         if (function_exists('rwmb_meta')) : 
-            $page_header = rwmb_meta('maacuni_header_style');
+            $page_header = rwmb_meta('habib_header_style');
         endif;
 
         if ($page_header == 'inherit-theme-option' || empty($page_header)) :

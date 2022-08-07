@@ -3,7 +3,7 @@
 endif;
 
 get_header(); 
-	$page_sidebar = maacuni_option('page-sidebar', false, 'right-sidebar');
+	$page_sidebar = habib_option('page-sidebar', false, 'right-sidebar');
 	$grid_column = 'col-lg-10 offset-lg-1';
 	
 	if (is_active_sidebar('maacuni-page-sidebar') && $page_sidebar != 'no-sidebar') :

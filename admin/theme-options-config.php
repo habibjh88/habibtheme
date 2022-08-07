@@ -16,7 +16,7 @@
     // This is your option name where all the Redux data is stored.
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-    $opt_name = "maacuni_theme_option";
+    $opt_name = "habib_theme_option";
 
 
     /**

@@ -7,29 +7,29 @@ endif;
 // Adds custom classes to the array of body classes.
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if ( ! function_exists( 'maacuni_body_classes' ) ) :
+if ( ! function_exists( 'habib_body_classes' ) ) :
 
-	function maacuni_body_classes( $classes ) {
+	function habib_body_classes( $classes ) {
 
 		// header style classes
 		$page_header = $transparent_opt = '';
 		if (function_exists('rwmb_meta')) :
-			$page_header = rwmb_meta('maacuni_header_style');
-			$transparent_opt = rwmb_meta('maacuni_header_transparent');
+			$page_header = rwmb_meta('habib_header_style');
+			$transparent_opt = rwmb_meta('habib_header_transparent');
 		endif;
 
 		if ($page_header == 'inherit-theme-option' || empty($page_header)) {
-			$classes[] = maacuni_option('header-style', false, 'header-default');
+			$classes[] = habib_option('header-style', false, 'header-default');
 		} else {
 			$classes[] = $page_header;
 		}
 
-		$header_page_options = maacuni_option('page-header-visibility', false, true);
-		$blog_page_header = maacuni_option('blog-page-header', false, true);
+		$header_page_options = habib_option('page-header-visibility', false, true);
+		$blog_page_header = habib_option('blog-page-header', false, true);
 		
 		$page_header_visibility = "";
 	    if (function_exists('rwmb_meta')) : 
-	        $page_header_visibility = rwmb_meta('maacuni_page_header_visibility');
+	        $page_header_visibility = rwmb_meta('habib_page_header_visibility');
 		endif;
 
 		if ($page_header_visibility == 'header-inherite-option' || $page_header_visibility == 'header-section-show' || $page_header_visibility == NULL) :
@@ -52,7 +52,7 @@ if ( ! function_exists( 'maacuni_body_classes' ) ) :
 			endif;
 		endif;
 		
-		$classes[] = maacuni_option('overlay-style', false, 'default-style');
+		$classes[] = habib_option('overlay-style', false, 'default-style');
 		
 		// Adds a class of group-blog to blogs with more than 1 published author.
 		if ( is_multi_author() ) :
@@ -60,7 +60,7 @@ if ( ! function_exists( 'maacuni_body_classes' ) ) :
 		endif;
 
 		// blog layout class
-		$blog_sidebar = maacuni_option('blog-sidebar', false, 'right-sidebar');
+		$blog_sidebar = habib_option('blog-sidebar', false, 'right-sidebar');
 		if ($blog_sidebar == 'left-sidebar') :
 			$classes[ ] = 'blog-left-sidebar';
 		elseif($blog_sidebar == 'right-sidebar') :
@@ -69,8 +69,8 @@ if ( ! function_exists( 'maacuni_body_classes' ) ) :
 			$classes[ ] = 'blog-no-sidebar';
 		endif;
 
-		$single_sidebar = maacuni_option('single-sidebar', false, 'right-sidebar');
-		$header_sticky = maacuni_option('sticky-menu-visibility', false, true);
+		$single_sidebar = habib_option('single-sidebar', false, 'right-sidebar');
+		$header_sticky = habib_option('sticky-menu-visibility', false, true);
 
 		if($single_sidebar != 'no-sidebar' && is_active_sidebar('maacuni-blog-sidebar')  && is_single()){
 			$classes[ ] = 'has-single-sidebar';
@@ -82,7 +82,7 @@ if ( ! function_exists( 'maacuni_body_classes' ) ) :
 
 		$body_bg = "";
         if (function_exists('rwmb_meta')) : 
-			$body_bg = rwmb_meta('maacuni_page_bg_color');
+			$body_bg = rwmb_meta('habib_page_bg_color');
 			
 			if(!empty($body_bg) && $body_bg != 'inherit') :
 				if($body_bg == 'body_bg_white'){
@@ -101,18 +101,18 @@ if ( ! function_exists( 'maacuni_body_classes' ) ) :
 			endif;
 		endif;
 		
-		$bg_404 = maacuni_option('page404-bg', false, false);
+		$bg_404 = habib_option('page404-bg', false, false);
 		if(is_404() && $bg_404 != 'default'){
 			$classes[ ] = $bg_404;
 		}
 
-		if(maacuni_option('rtl')){
+		if(habib_option('rtl')){
 			$classes[ ] = 'is-rtl';
 		}
 		
 		return $classes;
 	}
-	add_filter( 'body_class', 'maacuni_body_classes' );
+	add_filter( 'body_class', 'habib_body_classes' );
 
 endif;
 
@@ -121,12 +121,12 @@ endif;
 // Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if ( ! function_exists( 'maacuni_page_menu_args' ) ) :
-	function maacuni_page_menu_args( $args ) {
+if ( ! function_exists( 'habib_page_menu_args' ) ) :
+	function habib_page_menu_args( $args ) {
 		$args[ 'show_home' ] = TRUE;
 		return $args;
 	}
-	add_filter( 'wp_page_menu_args', 'maacuni_page_menu_args' );
+	add_filter( 'wp_page_menu_args', 'habib_page_menu_args' );
 endif;
 
 
@@ -134,9 +134,9 @@ endif;
 // Page break button in editor
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if ( ! function_exists( 'maacuni_wp_page_pagination' ) ) :
+if ( ! function_exists( 'habib_wp_page_pagination' ) ) :
 
-	function maacuni_wp_page_pagination( $mce_buttons ) {
+	function habib_wp_page_pagination( $mce_buttons ) {
 		if ( get_post_type() == 'post' or get_post_type() == 'page' ) {
 			$pos = array_search( 'wp_more', $mce_buttons, TRUE );
 			if ( $pos !== FALSE ) {
@@ -149,7 +149,7 @@ if ( ! function_exists( 'maacuni_wp_page_pagination' ) ) :
 		return $mce_buttons;
 	}
 
-	add_filter( 'mce_buttons', 'maacuni_wp_page_pagination' );
+	add_filter( 'mce_buttons', 'habib_wp_page_pagination' );
 
 endif;
 
@@ -170,7 +170,7 @@ endif;
 // Redux Ads Remove
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-add_filter( 'redux/' . 'maacuni_theme_option' . '/aURL_filter', '__return_empty_string' );
+add_filter( 'redux/' . 'habib_theme_option' . '/aURL_filter', '__return_empty_string' );
 
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -185,19 +185,19 @@ remove_action( 'woocommerce_after_shop_loop_item','woocommerce_template_loop_add
 // Change number of products per row
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if ( ! function_exists( 'maacuni_product_per_row' ) ) :
+if ( ! function_exists( 'habib_product_per_row' ) ) :
 
-	function maacuni_product_per_row() {
+	function habib_product_per_row() {
 		$product_per_row = 3;
 
-		if (maacuni_option('product-column')) :
-			return maacuni_option('product-column', false, true); // products per row
+		if (habib_option('product-column')) :
+			return habib_option('product-column', false, true); // products per row
 		else :
 			return $product_per_row;
 		endif;
 	}
 	
-	add_filter('loop_shop_columns', 'maacuni_product_per_row');
+	add_filter('loop_shop_columns', 'habib_product_per_row');
 
 endif;
 
@@ -205,17 +205,17 @@ endif;
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Product per page
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (!function_exists('maacuni_shop_per_page')) :
-	function maacuni_shop_per_page(){
+if (!function_exists('habib_shop_per_page')) :
+	function habib_shop_per_page(){
 		$product_per_page = 6;
 
-		if (maacuni_option('product-per-page')) :
-			return maacuni_option('product-per-page', false, true); // products per page
+		if (habib_option('product-per-page')) :
+			return habib_option('product-per-page', false, true); // products per page
 		else :
 			return $product_per_page;
 		endif;
 	}
-	add_filter( 'loop_shop_per_page', 'maacuni_shop_per_page');
+	add_filter( 'loop_shop_per_page', 'habib_shop_per_page');
 endif;
 
 
@@ -223,9 +223,9 @@ endif;
 //  Change shop thumbnail image size
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if ( ! function_exists( 'maacuni_shop_thumbnail_image_size' ) ):
+if ( ! function_exists( 'habib_shop_thumbnail_image_size' ) ):
 
-    function maacuni_shop_thumbnail_image_size( $size ) {
+    function habib_shop_thumbnail_image_size( $size ) {
         $size[ 'width' ]  = 60;
         $size[ 'height' ] = 60;
         $size[ 'crop' ]   = 1;
@@ -233,7 +233,7 @@ if ( ! function_exists( 'maacuni_shop_thumbnail_image_size' ) ):
         return $size;
     }
 
-    add_filter( 'woocommerce_get_image_size_shop_thumbnail', 'maacuni_shop_thumbnail_image_size' );
+    add_filter( 'woocommerce_get_image_size_shop_thumbnail', 'habib_shop_thumbnail_image_size' );
 
 endif;
 
@@ -242,9 +242,9 @@ endif;
 //  Change shop catalog image size
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if ( ! function_exists( 'maacuni_shop_catalog_image_size' ) ):
+if ( ! function_exists( 'habib_shop_catalog_image_size' ) ):
 
-    function maacuni_shop_catalog_image_size( $size ) {
+    function habib_shop_catalog_image_size( $size ) {
         $size[ 'width' ]  = 300;
         $size[ 'height' ] = 380;
         $size[ 'crop' ]   = 1;
@@ -252,15 +252,15 @@ if ( ! function_exists( 'maacuni_shop_catalog_image_size' ) ):
         return $size;
     }
 
-    add_filter( 'woocommerce_get_image_size_shop_catalog', 'maacuni_shop_catalog_image_size' );
+    add_filter( 'woocommerce_get_image_size_shop_catalog', 'habib_shop_catalog_image_size' );
 endif;
 
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 //  Wishlist button
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if(!function_exists('maacuni_wishlist_btn')) {
-    function maacuni_wishlist_btn() {
+if(!function_exists('habib_wishlist_btn')) {
+    function habib_wishlist_btn() {
         if(!class_exists('YITH_WCWL_Shortcode')){
             return;
         }
@@ -269,66 +269,66 @@ if(!function_exists('maacuni_wishlist_btn')) {
 }
 
 if( get_option('yith_wcwl_button_position') == 'shortcode' ) {
-    add_action( 'woocommerce_after_add_to_cart_button', 'maacuni_wishlist_btn', 30 );
+    add_action( 'woocommerce_after_add_to_cart_button', 'habib_wishlist_btn', 30 );
 }
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 //  Wishlist button
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if( !function_exists('maacuni_wishlist_text')):
-    function maacuni_wishlist_text(){
+if( !function_exists('habib_wishlist_text')):
+    function habib_wishlist_text(){
         return '<i class="fas fa-heart" aria-hidden="true"></i>';
     }
-    add_filter('yith-wcwl-browse-wishlist-label', 'maacuni_wishlist_text');
+    add_filter('yith-wcwl-browse-wishlist-label', 'habib_wishlist_text');
 endif;
 
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Cart contents update when products are added to the cart via AJAX
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (! function_exists('maacuni_header_add_to_cart_fragment')) :
-    function maacuni_header_add_to_cart_fragment( $fragments ) {
+if (! function_exists('habib_header_add_to_cart_fragment')) :
+    function habib_header_add_to_cart_fragment( $fragments ) {
         ob_start(); ?>
         <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'maacuni' ); ?>"><i class="fas fa-shopping-basket"></i><span class="cart-count"><?php echo intval(WC()->cart->get_cart_contents_count()); ?></span></a>
         <?php
         $fragments['a.cart-contents'] = ob_get_clean();
         return $fragments;
     }
-    add_filter( 'woocommerce_add_to_cart_fragments', 'maacuni_header_add_to_cart_fragment' );
+    add_filter( 'woocommerce_add_to_cart_fragments', 'habib_header_add_to_cart_fragment' );
 endif;
 
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 //  Wishlist update count
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (! function_exists('maacuni_update_wishlist_count')) :
-	function maacuni_update_wishlist_count(){
+if (! function_exists('habib_update_wishlist_count')) :
+	function habib_update_wishlist_count(){
 	    if( function_exists( 'YITH_WCWL' ) ){
 	        wp_send_json( YITH_WCWL()->count_products() );
 	    }
 	}
-	add_action( 'wp_ajax_update_wishlist_count', 'maacuni_update_wishlist_count' );
-	add_action( 'wp_ajax_nopriv_update_wishlist_count', 'maacuni_update_wishlist_count' );
+	add_action( 'wp_ajax_update_wishlist_count', 'habib_update_wishlist_count' );
+	add_action( 'wp_ajax_nopriv_update_wishlist_count', 'habib_update_wishlist_count' );
 endif;
 
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Woocommerce sidebar
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (! function_exists('maacuni_shop_sidebar')) {
-	function maacuni_shop_sidebar(){
+if (! function_exists('habib_shop_sidebar')) {
+	function habib_shop_sidebar(){
 		get_sidebar('shop');
 	}
 	
-	add_action('woocommerce_sidebar', 'maacuni_shop_sidebar');
+	add_action('woocommerce_sidebar', 'habib_shop_sidebar');
 }
 
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // AJAX Quick View
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (! function_exists('maacuni_product_quick_view')) :
-	function maacuni_product_quick_view() {
+if (! function_exists('habib_product_quick_view')) :
+	function habib_product_quick_view() {
 	    if(empty($_POST['prodid'])) {
 	        echo esc_html__('Error: Absent product id', 'maacuni');
 	        die();
@@ -352,8 +352,8 @@ if (! function_exists('maacuni_product_quick_view')) :
 	    }
 	    die();
 	}
-	add_action('wp_ajax_maacuni_product_quick_view', 'maacuni_product_quick_view');
-	add_action('wp_ajax_nopriv_maacuni_product_quick_view', 'maacuni_product_quick_view');
+	add_action('wp_ajax_habib_product_quick_view', 'habib_product_quick_view');
+	add_action('wp_ajax_nopriv_habib_product_quick_view', 'habib_product_quick_view');
 endif;
 
 
@@ -361,39 +361,39 @@ endif;
 //  Before cart markup
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if ( ! function_exists( 'maacuni_before_cart_div' ) ):
+if ( ! function_exists( 'habib_before_cart_div' ) ):
 
-    function maacuni_before_cart_div( ) {
+    function habib_before_cart_div( ) {
         echo '<div class="maacuni-shop maacuni-cart">';
     }
 
-    add_action( 'woocommerce_before_cart', 'maacuni_before_cart_div' );
+    add_action( 'woocommerce_before_cart', 'habib_before_cart_div' );
 endif;
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 //  after cart markup
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if ( ! function_exists( 'maacuni_after_cart_div' ) ):
+if ( ! function_exists( 'habib_after_cart_div' ) ):
 
-    function maacuni_after_cart_div( ) {
+    function habib_after_cart_div( ) {
         echo '</div>';
     }
 
-    add_action( 'woocommerce_after_cart', 'maacuni_after_cart_div' );
+    add_action( 'woocommerce_after_cart', 'habib_after_cart_div' );
 endif;
 
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Filter the "read more" excerpt string link to the post.
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (! function_exists('maacuni_excerpt_more')) :
-	function maacuni_excerpt_more( $more ) {
+if (! function_exists('habib_excerpt_more')) :
+	function habib_excerpt_more( $more ) {
 		echo esc_html(get_the_excerpt());
 	    return sprintf( '<a class="more-link" href="%1$s">%2$s</a>',
 	        get_permalink( get_the_ID() ),
 	        esc_html__( 'Read More', 'maacuni' )
 	    );
 	}
-	add_filter( 'the_excerpt', 'maacuni_excerpt_more' );
+	add_filter( 'the_excerpt', 'habib_excerpt_more' );
 endif;

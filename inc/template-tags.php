@@ -8,9 +8,9 @@ endif;
 //  Single blog post navigation
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_post_navigation')) :
+if (!function_exists('habib_post_navigation')) :
 
-    function maacuni_post_navigation() {
+    function habib_post_navigation() {
 
         $prev_post = (is_attachment()) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
         $next_post = get_adjacent_post(false, '', false);
@@ -19,7 +19,7 @@ if (!function_exists('maacuni_post_navigation')) :
             return;
         endif;
         ?>
-        <?php do_action('maacuni_before_single_post_navigation' );?>
+        <?php do_action('habib_before_single_post_navigation' );?>
         <nav class="single-post-navigation clearfix" role="navigation">
             <div class="row">
                 <?php if ($prev_post): ?>
@@ -49,7 +49,7 @@ if (!function_exists('maacuni_post_navigation')) :
                 <?php endif ?>
             </div> <!-- .row -->
         </nav> <!-- .single-post-navigation -->
-        <?php do_action('maacuni_after_single_post_navigation' );?>
+        <?php do_action('habib_after_single_post_navigation' );?>
     <?php
     }
 endif;
@@ -59,9 +59,9 @@ endif;
 //  Blog posts navigation
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_posts_navigation')) :
+if (!function_exists('habib_posts_navigation')) :
 
-    function maacuni_posts_navigation() { ?>
+    function habib_posts_navigation() { ?>
         <div class="blog-navigation clearfix">
             <?php if (get_next_posts_link()) : ?>
                 <div class="col-xs-6 pull-left">
@@ -87,8 +87,8 @@ endif;
 //  Blog posts pagination for default blog layout
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_posts_pagination')) :
-    function maacuni_posts_pagination() { 
+if (!function_exists('habib_posts_pagination')) :
+    function habib_posts_pagination() { 
         global $wp_query;
             if ($wp_query->max_num_pages > 1) {
                 $big = 999999999; // need an unlikely integer
@@ -117,8 +117,8 @@ endif;
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 //  TT pagination
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if ( ! function_exists( 'maacuni_posts_pagination' ) ):
-    function maacuni_posts_pagination($wp_query = FALSE) {
+if ( ! function_exists( 'habib_posts_pagination' ) ):
+    function habib_posts_pagination($wp_query = FALSE) {
 
         global $wp_rewrite;
         if (!$wp_query) {
@@ -157,9 +157,9 @@ endif;
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 //  Blog list style posts pagination
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if ( ! function_exists( 'maacuni_list_posts_pagination' ) ):
+if ( ! function_exists( 'habib_list_posts_pagination' ) ):
 
-    function maacuni_list_posts_pagination() {
+    function habib_list_posts_pagination() {
         global $query;
         if ($query->max_num_pages > 1) :
             $big   = 999999999; // need an unlikely integer
@@ -191,14 +191,14 @@ endif;
 //  Prints HTML with meta information for the current post-date/time, author & others.
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_post_meta')) :
-    function maacuni_post_meta() { ?>
+if (!function_exists('habib_post_meta')) :
+    function habib_post_meta() { ?>
         <ul class="list-inline">
-            <?php if ( maacuni_option( 'tt-post-meta', 'post-author', false ) && ! is_sticky()) : ?>
+            <?php if ( habib_option( 'tt-post-meta', 'post-author', false ) && ! is_sticky()) : ?>
                 <li>
                     <span class="author vcard">
                         <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
-                            <?php if ( maacuni_option( 'tt-post-meta', 'author-img', false ) ) {
+                            <?php if ( habib_option( 'tt-post-meta', 'author-img', false ) ) {
                                 echo get_avatar( get_the_author_meta( 'user_email' ), 35 ); 
                             } 
                             echo esc_html(get_the_author());
@@ -208,7 +208,7 @@ if (!function_exists('maacuni_post_meta')) :
                 </li>
             <?php endif; ?>
          
-            <?php if ( maacuni_option( 'tt-post-meta', 'post-category', TRUE ) ) : ?>
+            <?php if ( habib_option( 'tt-post-meta', 'post-category', TRUE ) ) : ?>
                 <li>
                     <span class="posted-in">
                         <?php echo get_the_category_list(esc_html_x(', ', 'Used between list items, there is a space after the comma.', 'maacuni'));
@@ -217,13 +217,13 @@ if (!function_exists('maacuni_post_meta')) :
                 </li>
             <?php endif; ?>
 
-            <?php if ( maacuni_option( 'tt-post-meta', 'post-date', TRUE ) ) : ?>
+            <?php if ( habib_option( 'tt-post-meta', 'post-date', TRUE ) ) : ?>
                 <li>
                     <a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark"><?php the_time( get_option( 'date_format' ) ); ?></a>
                 </li>
             <?php endif; ?>
             
-            <?php if ( maacuni_option( 'tt-post-meta', 'post-comment', TRUE ) ) : ?>
+            <?php if ( habib_option( 'tt-post-meta', 'post-comment', TRUE ) ) : ?>
                 <li>
                     <span class="post-comments-number">
                         <?php
@@ -238,7 +238,7 @@ if (!function_exists('maacuni_post_meta')) :
             <?php endif; ?>
             
             <?php if (function_exists('zilla_likes')) : 
-                if ( maacuni_option( 'tt-post-meta', 'post-like', FALSE ) ) : ?>
+                if ( habib_option( 'tt-post-meta', 'post-like', FALSE ) ) : ?>
                     <li>
                         <span class="likes">
                             <?php zilla_likes(); ?>
@@ -259,10 +259,10 @@ endif;
 //  Returns true if a blog has more than 1 category.
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_categorized_blog')) :
+if (!function_exists('habib_categorized_blog')) :
     
-    function maacuni_categorized_blog() {
-        if (false === ($all_the_cool_cats = get_transient('maacuni_categories'))) :
+    function habib_categorized_blog() {
+        if (false === ($all_the_cool_cats = get_transient('habib_categories'))) :
             // Create an array of all the categories that are attached to posts.
             $all_the_cool_cats = get_categories(array(
                 'fields'     => 'ids',
@@ -275,14 +275,14 @@ if (!function_exists('maacuni_categorized_blog')) :
             // Count the number of categories that are attached to the posts.
             $all_the_cool_cats = count($all_the_cool_cats);
 
-            set_transient('maacuni_categories', $all_the_cool_cats);
+            set_transient('habib_categories', $all_the_cool_cats);
         endif;
 
         if ($all_the_cool_cats > 1) :
-            // This blog has more than 1 category so maacuni_categorized_blog should return true.
+            // This blog has more than 1 category so habib_categorized_blog should return true.
             return true;
         else :
-            // This blog has only 1 category so maacuni_categorized_blog should return false.
+            // This blog has only 1 category so habib_categorized_blog should return false.
             return false;
         endif;
     }
@@ -294,9 +294,9 @@ endif;
 // Breadcrumb
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_breadcrumbs')) :
+if (!function_exists('habib_breadcrumbs')) :
 
-    function maacuni_breadcrumbs(){ ?>
+    function habib_breadcrumbs(){ ?>
         <nav aria-label="breadcrumb">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -365,8 +365,8 @@ endif;
 // Page header section background title
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_page_header_section_title')) :
-    function maacuni_page_header_section_title() {
+if (!function_exists('habib_page_header_section_title')) :
+    function habib_page_header_section_title() {
         $tt_query = get_queried_object();
 
         if (is_archive()) :
@@ -411,7 +411,7 @@ if (!function_exists('maacuni_page_header_section_title')) :
         endif;
 
         if (is_home() or is_single()) :
-            $page_header_title = maacuni_option('blog-title');
+            $page_header_title = habib_option('blog-title');
         endif;
 
         if (is_single()) :
@@ -440,7 +440,7 @@ if (!function_exists('maacuni_page_header_section_title')) :
             }
         }
 
-        $page_header_title = apply_filters('maacuni_page_header_section_title', $page_header_title, $page_header_title);
+        $page_header_title = apply_filters('habib_page_header_section_title', $page_header_title, $page_header_title);
 
         if (empty($page_header_title)) :
             $page_header_title = get_bloginfo('name');
@@ -455,43 +455,43 @@ endif;
 // Page header section background image
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_page_header_background')) :
+if (!function_exists('habib_page_header_background')) :
 
-    function maacuni_page_header_background() {
+    function habib_page_header_background() {
         $tt_query = get_queried_object();
 
         $page_header_image = false;
 
         if (is_archive()) :
-            $page_header_image = maacuni_option('archive-header-image', 'url');
+            $page_header_image = habib_option('archive-header-image', 'url');
         endif;
 
         if (is_404()) :
-            $page_header_image = maacuni_option('header-404-image', 'url');
+            $page_header_image = habib_option('header-404-image', 'url');
         endif;
 
         if (is_search()) :
-            $page_header_image = maacuni_option('search-header-image', 'url');
+            $page_header_image = habib_option('search-header-image', 'url');
         endif;
 
         if (is_category()) :
-            $page_header_image = maacuni_option('category-header-image', 'url');
+            $page_header_image = habib_option('category-header-image', 'url');
         endif;
 
         if (is_tag()) :
-            $page_header_image = maacuni_option('tag-header-image', 'url');
+            $page_header_image = habib_option('tag-header-image', 'url');
         endif;
 
         if (is_author()) :
-            $page_header_image = maacuni_option('author-header-image', 'url');
+            $page_header_image = habib_option('author-header-image', 'url');
         endif;
 
         if (is_page()) :
             
-            $page_header_image = maacuni_option('page-header-image', 'url');
+            $page_header_image = habib_option('page-header-image', 'url');
             
             if (function_exists('rwmb_meta')) :
-                $single_image = rwmb_meta('maacuni_page_header_image', 'type=image_advanced');
+                $single_image = rwmb_meta('habib_page_header_image', 'type=image_advanced');
             endif;
 
             if (!empty($single_image)) {
@@ -504,10 +504,10 @@ if (!function_exists('maacuni_page_header_background')) :
 
         if (is_single()) :
 
-            $page_header_image = maacuni_option('blog-header-image', 'url');
+            $page_header_image = habib_option('blog-header-image', 'url');
             
             if (function_exists('rwmb_meta')) :
-                $single_image = rwmb_meta('maacuni_page_header_image', 'type=image_advanced');
+                $single_image = rwmb_meta('habib_page_header_image', 'type=image_advanced');
             endif;
 
             if (!empty($single_image)) {
@@ -520,28 +520,28 @@ if (!function_exists('maacuni_page_header_background')) :
 
         if (empty ($single_image)) :
             if (is_singular('product')) :
-                $page_header_image = maacuni_option('product-header-image', 'url');
+                $page_header_image = habib_option('product-header-image', 'url');
             endif;
             if (is_singular('tt-portfolio')) :
-                $page_header_image = maacuni_option('portfolio-header-image', 'url');
+                $page_header_image = habib_option('portfolio-header-image', 'url');
             endif;
         endif;
 
         if ( class_exists( 'WooCommerce' ) ) {
             if ( is_product_category() || is_product_tag() || is_post_type_archive( 'product' )) {
-                $page_header_image = maacuni_option('product-header-image', 'url');
+                $page_header_image = habib_option('product-header-image', 'url');
             }
         }
 
         if (is_home()) :
-            $page_header_image = maacuni_option('blog-header-image', 'url');
+            $page_header_image = habib_option('blog-header-image', 'url');
         endif;
 
         if (!$page_header_image) :
-            $page_header_image = maacuni_option('blog-header-image', 'url');
+            $page_header_image = habib_option('blog-header-image', 'url');
         endif;
 
-        $image_src = apply_filters('maacuni_page_header_background', $page_header_image, $page_header_image);
+        $image_src = apply_filters('habib_page_header_background', $page_header_image, $page_header_image);
 
         return $image_src;
         
@@ -554,9 +554,9 @@ endif;
 // Comments list
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists("maacuni_comments_list")) :
+if (!function_exists("habib_comments_list")) :
 
-    function maacuni_comments_list($comment, $args, $depth) {
+    function habib_comments_list($comment, $args, $depth) {
         $GLOBALS['comment'] = $comment;
         switch ($comment->comment_type) {
             // Display trackbacks differently than normal comments.
@@ -578,8 +578,8 @@ if (!function_exists("maacuni_comments_list")) :
                 <div id="comment-<?php comment_ID(); ?>" class="comment">
                     <div class="comment-author clearfix">
                         <?php
-                            $get_avatar = get_avatar($comment, apply_filters('maacuni_post_comment_avatar_size', 48));
-                            $avatar_img = maacuni_get_avatar_url($get_avatar);
+                            $get_avatar = get_avatar($comment, apply_filters('habib_post_comment_avatar_size', 48));
+                            $avatar_img = habib_get_avatar_url($get_avatar);
                             //Comment author avatar
                         ?>
                         <img class="avatar" src="<?php echo esc_url($avatar_img); ?>" alt="<?php echo esc_attr(get_comment_author()); ?>">
@@ -632,8 +632,8 @@ endif;
 // Fetching Avatar URL
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_get_avatar_url')) :
-    function maacuni_get_avatar_url($get_avatar) {
+if (!function_exists('habib_get_avatar_url')) :
+    function habib_get_avatar_url($get_avatar) {
         preg_match("/src='(.*?)'/i", $get_avatar, $matches);
 
         return $matches[ 1 ];
@@ -645,8 +645,8 @@ endif;
 // Post thumbnail alt text
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (! function_exists( 'maacuni_alt_text' )) :
-    function maacuni_alt_text(){
+if (! function_exists( 'habib_alt_text' )) :
+    function habib_alt_text(){
         $id = get_the_ID();
         $thumbnail_id = get_post_thumbnail_id($id);
 
@@ -665,8 +665,8 @@ endif;
 // Associative array to html attribute conversion
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_array2attr')) :
-    function maacuni_array2attr($attr, $filter = '') {
+if (!function_exists('habib_array2attr')) :
+    function habib_array2attr($attr, $filter = '') {
         $attr = wp_parse_args($attr, array());
         if ($filter) {
             $attr = apply_filters($filter, $attr);
@@ -685,9 +685,9 @@ endif;
 // Hex to RGB color
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_hex2rgb')) :
+if (!function_exists('habib_hex2rgb')) :
     
-    function maacuni_hex2rgb($hex) {
+    function habib_hex2rgb($hex) {
        $hex = str_replace("#", "", $hex);
 
        if(strlen($hex) == 3) {
@@ -710,9 +710,9 @@ endif;
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // color modify for darken/lighten
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (!function_exists('maacuni_modify_color')) :
+if (!function_exists('habib_modify_color')) :
     
-    function maacuni_modify_color( $hex, $steps ) {
+    function habib_modify_color( $hex, $steps ) {
         $steps = max( -255, min( 255, $steps ) );
         // Format the hex color string
         $hex = str_replace( '#', '', $hex );
@@ -740,9 +740,9 @@ endif;
 // Get post category
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (!function_exists('maacuni_post_category_list')) :
+if (!function_exists('habib_post_category_list')) :
 
-    function maacuni_post_category_list() {
+    function habib_post_category_list() {
         $categories = get_categories( array(
             'orderby' => 'name',
             'order'   => 'ASC'
@@ -784,18 +784,18 @@ endif;
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Blog Image Croping 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (! function_exists('maacuni_blog_thumb_size')) :
-    function maacuni_blog_thumb_size(){
-        global $maacuni_count_stickies;
+if (! function_exists('habib_blog_thumb_size')) :
+    function habib_blog_thumb_size(){
+        global $habib_count_stickies;
         global $template;
-        global $maacuni_blog_post_count;
+        global $habib_blog_post_count;
         $template_base = basename($template);
-        $blog_column = maacuni_option('blog-column', false, 1);
-        $blog_sidebar = maacuni_option('blog-sidebar', false, 'right-sidebar');
+        $blog_column = habib_option('blog-column', false, 1);
+        $blog_sidebar = habib_option('blog-sidebar', false, 'right-sidebar');
 
 
         if (($blog_sidebar == 'no-sidebar' || !is_active_sidebar('maacuni-blog-sidebar')) && ! is_archive()) {
-            if( (is_sticky() && $maacuni_blog_post_count == 1) ) {
+            if( (is_sticky() && $habib_blog_post_count == 1) ) {
                 $blog_thumbnail = 'maacuni-thumbnail-portrait'; 
             } elseif (is_single() || $blog_column == 1) {
                 $blog_thumbnail = 'maacuni-thumbnail-large';
@@ -805,7 +805,7 @@ if (! function_exists('maacuni_blog_thumb_size')) :
                 $blog_thumbnail = 'maacuni-thumbnail';
             }
         } else {
-            if( (is_sticky() && $maacuni_blog_post_count == 1) || ($blog_column == 1 && $template_base != 'blog-grid-left-sidebar.php' && $template_base != 'blog-grid-right-sidebar.php' && $template_base != 'blog-sticky.php' && ! is_single()) || is_single()) {
+            if( (is_sticky() && $habib_blog_post_count == 1) || ($blog_column == 1 && $template_base != 'blog-grid-left-sidebar.php' && $template_base != 'blog-grid-right-sidebar.php' && $template_base != 'blog-sticky.php' && ! is_single()) || is_single()) {
                 $blog_thumbnail = 'maacuni-thumbnail-large';
             } else if(is_archive()) {
                 $blog_thumbnail = 'maacuni-thumbnail-large';
@@ -826,8 +826,8 @@ endif;
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Shortens a number and attaches K, M, B, etc. accordingly
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (! function_exists('maacuni_number_shorten')) {
-    function maacuni_number_shorten($number, $precision = 3, $divisors = null) {
+if (! function_exists('habib_number_shorten')) {
+    function habib_number_shorten($number, $precision = 3, $divisors = null) {
         // Setup default $divisors if not provided
         if (!isset($divisors)) {
             $divisors = array(

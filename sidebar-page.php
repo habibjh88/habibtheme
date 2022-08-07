@@ -2,7 +2,7 @@
     exit; // Exit if accessed directly
 endif;
 
-$page_sidebar = maacuni_option( 'page-sidebar', false, 'right-sidebar' );
+$page_sidebar = habib_option( 'page-sidebar', false, 'right-sidebar' );
 
 if ( $page_sidebar == 'right-sidebar' and is_active_sidebar( 'maacuni-page-sidebar' ) ) : ?>
 	<div class="col-lg-4 col-md-12">

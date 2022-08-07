@@ -3,10 +3,10 @@
 endif;
 
 get_header();
-    $single_sidebar = maacuni_option('single-sidebar', false, 'right-sidebar');
-    $single_post_header = maacuni_option('blog-single-page-header', false, false);
-    $header_page_options = maacuni_option('page-header-visibility', false, true);
-    $blog_style = maacuni_option('blog-style', false, 'default');
+    $single_sidebar = habib_option('single-sidebar', false, 'right-sidebar');
+    $single_post_header = habib_option('blog-single-page-header', false, false);
+    $header_page_options = habib_option('page-header-visibility', false, true);
+    $blog_style = habib_option('blog-style', false, 'default');
     $grid_column = 'col-12';
 
     if ($single_sidebar == 'left-sidebar' || $single_sidebar == 'right-sidebar') :
@@ -49,7 +49,7 @@ get_header();
                                         get_template_part( 'author-bio' ); 
                                     endif;
 
-                                    maacuni_post_navigation(); 
+                                    habib_post_navigation(); 
                                 
                                     // If comments are open or we have at least one comment, load up the comment template.
                                     if ( comments_open() || get_comments_number() ) :

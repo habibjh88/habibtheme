@@ -36,7 +36,7 @@ if ( post_password_required() ) {
                     'style'       => 'li',
                     'short_ping'  => true,
                     'avatar_size' => 50,
-                    'callback'    => 'maacuni_comments_list'
+                    'callback'    => 'habib_comments_list'
                 ));
             ?>
         </ul><!-- .comment-list -->

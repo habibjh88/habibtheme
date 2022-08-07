@@ -1,73 +1,56 @@
-<?php if ( ! defined( 'ABSPATH' ) ) :
+<?php
+/*
+Front Page
+*/
+
+if (!defined('ABSPATH')) :
     exit; // Exit if accessed directly
 endif;
 
-get_header();
-	$blog_column = maacuni_option('blog-column', false, 1);
-	$blog_sidebar = maacuni_option('blog-sidebar', false, 'right-sidebar');
-	$blog_page_header = maacuni_option('blog-page-header', false, true);
-	$grid_column = 'col-12';
-	
-	if ($blog_sidebar != 'no-sidebar') :
-		$grid_column = (is_active_sidebar('maacuni-blog-sidebar')) ? 'col-md-12 col-lg-8' : $grid_column;
-	endif;
+get_header('two');
 
-	if(($blog_sidebar == 'no-sidebar' || ! is_active_sidebar('maacuni-blog-sidebar')) && $blog_column == 1) {
-		$grid_column = 'col-lg-10 offset-lg-1';
-	}
 ?>
-<div class="blog-wrapper content-wrapper pt-100">
-	<div class="container">
-		<div class="row ">
-			<div class="<?php echo esc_attr($grid_column); ?>">
-				<div id="main" class="posts-content" role="main">
-					<div class="row <?php echo esc_attr($blog_column != 1 ? 'masonry-wrap' : '') ?>">
-						<?php if ( have_posts() ) : ?>
+    <div class="main-wrapper">
+        <div class="container">
 
-							<?php while ( have_posts() ) : the_post(); 
+            <div class="row">
+                <div class="header2-main-menu">
 
-								$blog_layout = "";
-								if( ($blog_column == 2) || ($blog_column == 3 && $blog_sidebar != 'no-sidebar' && is_active_sidebar('maacuni-blog-sidebar')) ){
-									$blog_layout = 'col-md-6 col-lg-6 col-12 masonry-column';
-								} elseif($blog_column == 3 && ($blog_sidebar == 'no-sidebar' || !is_active_sidebar('maacuni-blog-sidebar'))){
-									$blog_layout = 'col-md-6 col-lg-4 col-12 masonry-column';
-								} else{
-									$blog_layout = 'col-md-12 ';
-								} ?>
+                    <?php wp_nav_menu(apply_filters('habib_primary_wp_nav_menu', array(
+                        'container' => false,
+                        'theme_location' => 'primary',
+                        'items_wrap' => '<ul id="%1$s" class="%2$s nav navbar-nav">%3$s</ul>',
+                        'walker' => new habib_Navwalker(),
+                        'fallback_cb' => false
+                    ))); ?>
 
-								<div class="<?php echo esc_attr($blog_layout); ?>">
-									<?php
-										/*
-										* Include the Post-Format-specific template for the content.
-										* If you want to override this in a child theme, then include a file
-										* called content-___.php (where ___ is the Post Format name) and that will be used instead.
-										*/
-										get_template_part( 'template-parts/content', get_post_format() );
-									?>
-								</div>
-							<?php endwhile; ?>
-						<?php else : ?>
+                </div>
+            </div>
 
-							<?php get_template_part( 'template-parts/content', 'none' ); ?>
+            <div class="row justify-content-center home-portfolio">
 
-						<?php endif; ?>
-					</div><!-- .row -->
-					<div class="row">
-						<div class="col-12 text-center mt-5">						
-							<?php if ( maacuni_option( 'blog-page-nav', false, true ) ) {
-								echo maacuni_posts_pagination();
-							} else {
-								maacuni_posts_navigation();
-							} ?>
-						</div>
-					</div>
-				</div><!-- .posts-content -->
-			</div> <!-- .col-## -->
+                <?php
+//                $args = array(
+//                    'post_type' => 'post',
+//                    'post_status' => 'publish',
+//                    'posts_per_page' => -1,
+//
+//                );
+//                $wp_query = new WP_Query($args);
 
-			<!-- Sidebar -->
-			<?php get_sidebar(); ?>
+                if (have_posts()) {
 
-		</div> <!-- .row -->
-	</div> <!-- .container -->
-</div> <!-- .blog-wrapper -->
-<?php get_footer(); ?>
+                    while (have_posts()) : the_post(); ?>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mb-30">
+                            <?php get_template_part('template-parts/content'); ?>
+                        </div>
+                    <?php
+                    endwhile;
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+<?php
+
+get_footer('two');

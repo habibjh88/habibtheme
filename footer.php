@@ -4,12 +4,12 @@ endif; ?>
 
 
             <?php
-                $tt_footer_style = maacuni_option('footer-style', false, 'footer-multipage');
+                $tt_footer_style = habib_option('footer-style', false, 'footer-multipage');
 
                 $page_footer = $footer_font_color = "";
                 if (function_exists('rwmb_meta')) : 
-                    $page_footer = rwmb_meta('maacuni_footer_style');
-                    $footer_font_color = rwmb_meta('maacuni_footer_font_color');
+                    $page_footer = rwmb_meta('habib_footer_style');
+                    $footer_font_color = rwmb_meta('habib_footer_font_color');
                 endif; ?>
 
                 <?php if('inherit' != $footer_font_color) : ?>
@@ -42,7 +42,7 @@ endif; ?>
                     </div>
                 <?php endif; ?>
 
-                <?php do_action('maacuni_after_site_wrapper'); ?>
+                <?php do_action('habib_after_site_wrapper'); ?>
 
             </div> <!-- .site-wrapper -->
         <?php wp_footer(); ?>

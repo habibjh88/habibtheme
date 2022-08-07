@@ -5,8 +5,8 @@ endif;
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // MAACUNI FUNCTIONS AND DEFINITIONS
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if ( ! defined( 'MAACUNI_THEME_NAME' ) ) {
-    define( 'MAACUNI_THEME_NAME', wp_get_theme()->get( 'Name' ) );
+if ( ! defined( 'habib_THEME_NAME' ) ) {
+    define( 'habib_THEME_NAME', wp_get_theme()->get( 'Name' ) );
 }
 
 
@@ -19,7 +19,7 @@ require get_template_directory() . "/inc/tt-navwalker.php";
 require get_template_directory() . "/inc/tt-mobile-navwalker.php";
 
 
-if (!function_exists('maacuni_theme_setup')) :
+if (!function_exists('habib_theme_setup')) :
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Sets up theme defaults and registers support for various WordPress features.
@@ -28,7 +28,7 @@ if (!function_exists('maacuni_theme_setup')) :
 // as indicating support for post thumbnails.
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-    function maacuni_theme_setup(){
+    function habib_theme_setup(){
        
         //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         // Make theme available for translation.
@@ -118,9 +118,9 @@ if (!function_exists('maacuni_theme_setup')) :
 
     }
 
-    add_action('after_setup_theme', 'maacuni_theme_setup');
+    add_action('after_setup_theme', 'habib_theme_setup');
 
-endif; // maacuni_theme_setup
+endif; // habib_theme_setup
 
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -128,11 +128,11 @@ endif; // maacuni_theme_setup
 // Priority 0 to make it available to lower priority callbacks.
 // @global int $content_width
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (!function_exists('maacuni_content_width')) :
-    function maacuni_content_width() {
-        $GLOBALS['content_width'] = apply_filters( 'maacuni_content_width', 1170 );
+if (!function_exists('habib_content_width')) :
+    function habib_content_width() {
+        $GLOBALS['content_width'] = apply_filters( 'habib_content_width', 1170 );
     }
-    add_action( 'after_setup_theme', 'maacuni_content_width', 0 );
+    add_action( 'after_setup_theme', 'habib_content_width', 0 );
 endif;
     
 
@@ -140,13 +140,13 @@ endif;
 // Register widget area.
 // @link https://codex.wordpress.org/Function_Reference/register_sidebar
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (!function_exists('maacuni_widgets_init')) :
+if (!function_exists('habib_widgets_init')) :
 
-    function maacuni_widgets_init() {
+    function habib_widgets_init() {
 
-    	do_action('maacuni_before_register_sidebar');
+    	do_action('habib_before_register_sidebar');
 
-        register_sidebar( apply_filters( 'maacuni_blog_sidebar', array(
+        register_sidebar( apply_filters( 'habib_blog_sidebar', array(
             'name'          => esc_html__('Blog Sidebar', 'maacuni'),
             'id'            => 'maacuni-blog-sidebar',
             'description'   => esc_html__('Appears in the blog sidebar.', 'maacuni'),
@@ -156,7 +156,7 @@ if (!function_exists('maacuni_widgets_init')) :
             'after_title'   => '</h3>',
         )));
 
-        register_sidebar( apply_filters( 'maacuni_page_sidebar', array(
+        register_sidebar( apply_filters( 'habib_page_sidebar', array(
             'name'          => esc_html__('Page Sidebar Area', 'maacuni'),
             'id'            => 'maacuni-page-sidebar',
             'description'   => esc_html__('Appears in the Page sidebar.', 'maacuni'),
@@ -166,8 +166,8 @@ if (!function_exists('maacuni_widgets_init')) :
             'after_title'   => '</h3>',
         )));
 
-        if (maacuni_option('offcanvas-visibility')) {
-            register_sidebar( apply_filters( 'maacuni_toggle_menu_sidebar', array(
+        if (habib_option('offcanvas-visibility')) {
+            register_sidebar( apply_filters( 'habib_toggle_menu_sidebar', array(
                 'name'          => esc_html__('Offcanvas Sidebar', 'maacuni'),
                 'id'            => 'maacuni-toogle-menu-sidebar',
                 'description'   => esc_html__('This widget created for offcanvas sidebar only', 'maacuni'),
@@ -178,7 +178,7 @@ if (!function_exists('maacuni_widgets_init')) :
             )));
         }
         
-        register_sidebar( apply_filters( 'maacuni_footer_sidebar', array(
+        register_sidebar( apply_filters( 'habib_footer_sidebar', array(
             'name'          => esc_html__('Footer Sidebar Area', 'maacuni'),
             'id'            => 'maacuni-footer-sidebar',
             'description'   => esc_html__('Appears in the footer', 'maacuni'),
@@ -189,7 +189,7 @@ if (!function_exists('maacuni_widgets_init')) :
         )));
         
         if (class_exists('WooCommerce')) {
-            register_sidebar( apply_filters( 'maacuni_shop_sidebar', array(
+            register_sidebar( apply_filters( 'habib_shop_sidebar', array(
                 'name'          => esc_html__('Shop Sidebar Area', 'maacuni'),
                 'id'            => 'maacuni-shop-sidebar',
                 'description'   => esc_html__('Appears in the shop sidebar sidebar.', 'maacuni'),
@@ -200,18 +200,18 @@ if (!function_exists('maacuni_widgets_init')) :
             )));
         }
 
-        do_action('maacuni_after_register_sidebar');
+        do_action('habib_after_register_sidebar');
     }
 
-    add_action('widgets_init', 'maacuni_widgets_init');
+    add_action('widgets_init', 'habib_widgets_init');
 endif;
 
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Load Google Font If Redux framework is not activated.
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (! function_exists('maacuni_fonts_url')) :
-    function maacuni_fonts_url() {
+if (! function_exists('habib_fonts_url')) :
+    function habib_fonts_url() {
         $font_url = '';
 
         $montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'maacuni' );
@@ -244,15 +244,15 @@ endif;
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Enqueue scripts and styles.
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-if (!function_exists('maacuni_scripts')) :
+if (!function_exists('habib_scripts')) :
     
-    function maacuni_scripts() {
+    function habib_scripts() {
 
         //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         // Styles
         //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        if (! maacuni_option( 'body-typography' )) :
-            wp_enqueue_style('maacuni-google-fonts', maacuni_fonts_url(), array(), NULL);
+        if (! habib_option( 'body-typography' )) :
+            wp_enqueue_style('maacuni-google-fonts', habib_fonts_url(), array(), NULL);
         endif;
         
         wp_enqueue_style('fontawesome-all', get_template_directory_uri() . '/css/fontawesome-all.min.css', array(), '5.0.11');
@@ -264,13 +264,13 @@ if (!function_exists('maacuni_scripts')) :
         wp_register_style('swiper', get_template_directory_uri() . '/css/swiper.min.css', array(), NULL);
         wp_register_style('owl-theme', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), NULL);
 
-        if(! is_front_page()) {
-            wp_enqueue_style('maacuni-stylesheet', get_stylesheet_uri());
-        } else {
-            wp_enqueue_style('style-css', get_template_directory_uri() . '/css/style.css', array(), NULL);
-        }
+//        if(! is_front_page()) {
+//            wp_enqueue_style('maacuni-stylesheet', get_stylesheet_uri());
+//        } else {
+//        }
+        wp_enqueue_style('style-css', get_template_directory_uri() . '/css/style.css', array(), NULL);
 
-        
+
         //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         // scripts
         //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -284,7 +284,7 @@ if (!function_exists('maacuni_scripts')) :
         wp_enqueue_script('nicescroll', get_template_directory_uri() . '/js/jquery.nicescroll.min.js', array('jquery'), NULL, TRUE);
         
         wp_register_script('vide', get_template_directory_uri() . '/js/jquery.vide.min.js', array('jquery'), NULL, TRUE);
-        if (maacuni_option('news-feed-visibility', false, true)) :
+        if (habib_option('news-feed-visibility', false, true)) :
             wp_enqueue_script('news-ticker', get_template_directory_uri() . '/js/jquery.news-ticker.min.js', array('jquery'), NULL, TRUE);
         endif;
         wp_enqueue_script( 'jquery-masonry' );
@@ -298,10 +298,10 @@ if (!function_exists('maacuni_scripts')) :
         }
 
 
-        wp_localize_script( 'maacuni-scripts', 'maacuniJSObject', apply_filters( 'maacuni_js_object', array(
+        wp_localize_script( 'maacuni-scripts', 'maacuniJSObject', apply_filters( 'habib_js_object', array(
             'ajaxurl'                => admin_url( 'admin-ajax.php' ),
             'is_front_page'          => is_front_page(),
-            'maacuni_news_ticker'    => maacuni_option('news-feed-visibility', false, true),
+            'habib_news_ticker'    => habib_option('news-feed-visibility', false, true),
 		) ) );
 
         if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -309,7 +309,7 @@ if (!function_exists('maacuni_scripts')) :
         }
     }
 
-    add_action('wp_enqueue_scripts', 'maacuni_scripts');
+    add_action('wp_enqueue_scripts', 'habib_scripts');
 endif;
 
 
@@ -317,13 +317,13 @@ endif;
 // Support editor style
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  
 
-if (!function_exists('maacuni_editor_styles')) :
-    function maacuni_editor_styles() {
-        wp_enqueue_style('maacuni-google-fonts', maacuni_fonts_url(), array(), NULL);
+if (!function_exists('habib_editor_styles')) :
+    function habib_editor_styles() {
+        wp_enqueue_style('maacuni-google-fonts', habib_fonts_url(), array(), NULL);
         wp_enqueue_style( 'maacuni-editor-style', get_template_directory_uri() . '/css/editor-style.css');
     }
 endif;
-add_action( 'enqueue_block_editor_assets', 'maacuni_editor_styles', 999 );
+add_action( 'enqueue_block_editor_assets', 'habib_editor_styles', 999 );
 
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

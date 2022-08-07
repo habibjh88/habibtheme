@@ -9,7 +9,7 @@ endif;
         <div class="media-left">
             <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="media-object">
                 <?php
-                echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'maacuni_author_bio_avatar_size', 100 ) ); 
+                echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'habib_author_bio_avatar_size', 100 ) ); 
                 ?>
             </a>
         </div>

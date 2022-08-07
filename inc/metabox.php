@@ -8,9 +8,9 @@ endif;
 // Register meta boxes
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if (! function_exists('maacuni_register_meta_boxes')) :
+if (! function_exists('habib_register_meta_boxes')) :
 
-	function maacuni_register_meta_boxes( $meta_boxes ) {
+	function habib_register_meta_boxes( $meta_boxes ) {
 
 		//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 		// Meta box for portfolio 
@@ -90,5 +90,5 @@ if (! function_exists('maacuni_register_meta_boxes')) :
 		return $meta_boxes;
 	}
 
-	add_filter( 'rwmb_meta_boxes', 'maacuni_register_meta_boxes' );
+	add_filter( 'rwmb_meta_boxes', 'habib_register_meta_boxes' );
 endif;

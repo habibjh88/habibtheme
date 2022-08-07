@@ -847,7 +847,7 @@ jQuery(function($) {
                         'single_show_hide': single_show_hide,
                         'link_show_hide': link_show_hide,
                         'portfolio_count': portfolio_count,
-                        'action': 'maacuni_portfolio_ajax'
+                        'action': 'habib_portfolio_ajax'
                     },
                     beforeSend: function() {
                         $('<i class="fa fa-spinner fa-spin"></i>').appendTo(".loadmore-btn").fadeIn(100);
@@ -911,7 +911,7 @@ jQuery(function($) {
     /* === TICKER  === */
     $(window).on('load', function() {
         $('.news-ticker-wrapper').fadeIn();
-        if (maacuniJSObject.maacuni_news_ticker == true) {
+        if (maacuniJSObject.habib_news_ticker == true) {
             $('.news-ticker').newsTicker({
                 row_height: 40,
                 max_rows: 1,
@@ -939,7 +939,7 @@ jQuery(function($) {
                 url: maacuniJSObject.ajaxurl,
                 method: 'POST',
                 data: {
-                    'action': 'maacuni_product_quick_view',
+                    'action': 'habib_product_quick_view',
                     'prodid': prodid
                 },
                 dataType: 'html',

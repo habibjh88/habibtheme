@@ -14,14 +14,14 @@ endif; ?>
         </div>
     <?php endif; ?>
 
-    <div class="footer-copyright-wrap <?php echo esc_attr(maacuni_option('social-icon-visibility') == true ? '' : 'text-center');?>">
+    <div class="footer-copyright-wrap <?php echo esc_attr(habib_option('social-icon-visibility') == true ? '' : 'text-center');?>">
         <div class="container d-lg-flex">
             <div class="copyright flex-grow-1">
                         <p>Developed by Habib</p>
                        
             </div> <!-- .copyright -->
 
-            <?php if (maacuni_option('social-icon-visibility')) : ?>
+            <?php if (habib_option('social-icon-visibility')) : ?>
                 <div class="social-links-wrap text-right">
                     <?php get_template_part('template-parts/social', 'icons');?>
                 </div> <!-- /social-links-wrap -->

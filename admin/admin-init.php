@@ -6,19 +6,19 @@ endif;
 // Getting theme option data
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if ( !function_exists('maacuni_option')) :
+if ( !function_exists('habib_option')) :
     
-    function maacuni_option($index = FALSE, $index2 = FALSE, $default = NULL) {
-        global $maacuni_theme_option;
+    function habib_option($index = FALSE, $index2 = FALSE, $default = NULL) {
+        global $habib_theme_option;
 
         if (empty($index)) {
-            return $maacuni_theme_option;
+            return $habib_theme_option;
         }
 
         if ($index2) {
-            $result = (isset($maacuni_theme_option[ $index ]) and isset($maacuni_theme_option[ $index ][ $index2 ])) ? $maacuni_theme_option[ $index ][ $index2 ] : $default;
+            $result = (isset($habib_theme_option[ $index ]) and isset($habib_theme_option[ $index ][ $index2 ])) ? $habib_theme_option[ $index ][ $index2 ] : $default;
         } else {
-            $result = isset($maacuni_theme_option[ $index ]) ? $maacuni_theme_option[ $index ] : $default;
+            $result = isset($habib_theme_option[ $index ]) ? $habib_theme_option[ $index ] : $default;
         }
 
         if ($result == '1' or $result == '0') {

@@ -6,11 +6,11 @@ $tt_page_template = basename( get_page_template_slug() );
 
 $page_header_visibility = NULL;
 
-$header_page_options = maacuni_option('page-header-visibility', false, true);
-$blog_page_header = maacuni_option('blog-page-header', false, true);
+$header_page_options = habib_option('page-header-visibility', false, true);
+$blog_page_header = habib_option('blog-page-header', false, true);
 
 if (function_exists('rwmb_meta')) :
-    $page_header_visibility = rwmb_meta('maacuni_page_header_visibility');
+    $page_header_visibility = rwmb_meta('habib_page_header_visibility');
 endif;
 
 if(!is_404() && !is_single()) :

@@ -6,8 +6,8 @@ endif;
 $tt_menu_bg = $tt_menu_color = $tt_icon_color = $menu_bg = $menu_color = "";
 
 if (function_exists('rwmb_meta')) :
-    $menu_bg = rwmb_meta( 'maacuni_left_menu_bg' );
-    $menu_color = rwmb_meta( 'maacuni_left_menu_color' );
+    $menu_bg = rwmb_meta( 'habib_left_menu_bg' );
+    $menu_color = rwmb_meta( 'habib_left_menu_color' );
 endif;
 
 if($menu_bg){
@@ -45,11 +45,11 @@ if($menu_color){
 
 
 <div class="menu-wrapper d-none d-lg-block">
-    <?php wp_nav_menu( apply_filters( 'maacuni_primary_wp_nav_menu', array(
+    <?php wp_nav_menu( apply_filters( 'habib_primary_wp_nav_menu', array(
         'container'      => false,
         'theme_location' => 'primary',
         'items_wrap'     => '<ul id="%1$s" class="%2$s nav navbar-nav">%3$s</ul>',
-        'walker'         => new Maacuni_Navwalker(),
+        'walker'         => new habib_Navwalker(),
         'fallback_cb'    => false
     ))); ?>
 </div>

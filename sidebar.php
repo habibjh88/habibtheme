@@ -2,8 +2,8 @@
     exit; // Exit if accessed directly
 endif;
 
-$blog_sidebar = maacuni_option('blog-sidebar', false, 'right-sidebar');
-$single_sidebar = maacuni_option('single-sidebar', false, 'right-sidebar');
+$blog_sidebar = habib_option('blog-sidebar', false, 'right-sidebar');
+$single_sidebar = habib_option('single-sidebar', false, 'right-sidebar');
 
 if(is_single()){
     if ( $single_sidebar == 'right-sidebar' and is_active_sidebar('maacuni-blog-sidebar')) : ?>

@@ -1,6 +1,6 @@
 <?php
 
-class Maacuni_Mobile_Navwalker extends Walker_Nav_Menu {
+class habib_Mobile_Navwalker extends Walker_Nav_Menu {
 
     private $current_Item;
 

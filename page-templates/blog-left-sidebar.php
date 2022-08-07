@@ -26,13 +26,13 @@ get_header(); ?>
 					);
 					$query = new WP_Query( $args );
 					if ( $query->have_posts() ) : 
-						$maacuni_blog_post_count = 1;
+						$habib_blog_post_count = 1;
 						while ( $query->have_posts() ) : $query->the_post(); 
 							$gird_column = 'col-md-12 col-xs-12 masonry-column'; ?>
 							<div class="<?php echo esc_attr($gird_column); ?>">
 								<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 							</div>
-							<?php $maacuni_blog_post_count++;
+							<?php $habib_blog_post_count++;
 						endwhile; ?>
 
 					<?php wp_reset_postdata();
@@ -44,7 +44,7 @@ get_header(); ?>
 					
 				</div><!-- .posts-content -->
 				<div class="col-md-12 mt-4">
-					<?php echo maacuni_list_posts_pagination(); ?>
+					<?php echo habib_list_posts_pagination(); ?>
 				</div>
 			</div> <!-- .col -->
 

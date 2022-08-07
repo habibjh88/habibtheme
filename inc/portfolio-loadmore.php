@@ -1,9 +1,9 @@
 <?php
-add_action('wp_ajax_nopriv_maacuni_portfolio_ajax', 'maacuni_more_post_ajax');
-add_action('wp_ajax_maacuni_portfolio_ajax', 'maacuni_more_post_ajax');
+add_action('wp_ajax_nopriv_habib_portfolio_ajax', 'habib_more_post_ajax');
+add_action('wp_ajax_habib_portfolio_ajax', 'habib_more_post_ajax');
  
-if (!function_exists('maacuni_more_post_ajax')) {
-    function maacuni_more_post_ajax(){
+if (!function_exists('habib_more_post_ajax')) {
+    function habib_more_post_ajax(){
 
         $ppp = (isset($_POST['perpage'])) ? $_POST['perpage'] : 3;
         $offset = (isset($_POST['offset'])) ? $_POST['offset'] : 0;
@@ -138,7 +138,7 @@ if (!function_exists('maacuni_more_post_ajax')) {
                                 <p>
                                     <?php 
                                         $trim_word = $content_limit;
-                                        $portfolio_info = get_post_meta(get_the_ID(), 'maacuni_portfolio_info', false);
+                                        $portfolio_info = get_post_meta(get_the_ID(), 'habib_portfolio_info', false);
                                         echo wp_trim_words( implode(' ', $portfolio_info) , $trim_word, '');
                                     ?>
                                 </p>
