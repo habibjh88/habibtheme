@@ -26,7 +26,7 @@ if (!function_exists('habib_post_navigation')) :
                     <!-- Previous Post -->
                     <div class="col-md-6 col-xs-12">
                         <div class="previous-post-link">
-                            <?php previous_post_link('<div class="previous">%link</div>', '<i class="fa fa-angle-left"></i>' . esc_html__( 'Previous', 'maacuni' )); ?>
+                            <?php previous_post_link('<div class="previous">%link</div>', '<i class="fa fa-angle-left"></i>' . esc_html__( 'Previous', 'habib' )); ?>
 
                             <h3 class="entry-title">
                                 <a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"><?php echo wp_kses( get_the_title( $prev_post->ID ), array() ); ?></a>
@@ -39,7 +39,7 @@ if (!function_exists('habib_post_navigation')) :
                     <!-- Next Post -->
                     <div class="col-md-6 col-xs-12 pull-right">
                         <div class="next-post-link">
-                            <?php next_post_link('<div class="next">%link</div>', esc_html__( 'Next', 'maacuni' ) . '<i class="fas fa-angle-right"></i>'); ?>
+                            <?php next_post_link('<div class="next">%link</div>', esc_html__( 'Next', 'habib' ) . '<i class="fas fa-angle-right"></i>'); ?>
 
                             <h3 class="entry-title">
                                 <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo wp_kses( get_the_title( $next_post->ID ), array() ); ?></a>
@@ -66,7 +66,7 @@ if (!function_exists('habib_posts_navigation')) :
             <?php if (get_next_posts_link()) : ?>
                 <div class="col-xs-6 pull-left">
                     <div class="previous-page">
-                        <?php next_posts_link('<i class="fas fa-long-arrow-alt-left"></i>' . esc_html__('Older Posts', 'maacuni')); ?>
+                        <?php next_posts_link('<i class="fas fa-long-arrow-alt-left"></i>' . esc_html__('Older Posts', 'habib')); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -74,7 +74,7 @@ if (!function_exists('habib_posts_navigation')) :
             <?php if (get_previous_posts_link()) : ?>
                 <div class="col-xs-6 pull-right">
                     <div class="next-page">
-                        <?php previous_posts_link(esc_html__('Newer Posts', 'maacuni') . '<i class="fas fa-long-arrow-alt-right"></i>'); ?>
+                        <?php previous_posts_link(esc_html__('Newer Posts', 'habib') . '<i class="fas fa-long-arrow-alt-right"></i>'); ?>
                     </div>
                 </div>
             <?php endif; ?>
@@ -99,8 +99,8 @@ if (!function_exists('habib_posts_pagination')) :
                     'current'   => max(1, get_query_var('paged')),
                     'total'     => $wp_query->max_num_pages,
                     'type'      => 'array',
-                    'prev_text' => esc_html__('Prev.', 'maacuni'),
-                    'next_text' => esc_html__('Next', 'maacuni')
+                    'prev_text' => esc_html__('Prev.', 'habib'),
+                    'next_text' => esc_html__('Next', 'habib')
                 ));
 
                 $pagination = "<ul class=\"pagination\">\n\t<li>";
@@ -137,8 +137,8 @@ if ( ! function_exists( 'habib_posts_pagination' ) ):
             //'show_all'  => TRUE,
             'prev_next' => TRUE,
             'type'      => 'array',
-            'prev_text' => esc_html__('Prev', 'maacuni'),
-            'next_text' => esc_html__('Next', 'maacuni')
+            'prev_text' => esc_html__('Prev', 'habib'),
+            'next_text' => esc_html__('Next', 'habib')
         );
 
         if (!empty($wp_query->query_vars[ 's' ])) $pagination[ 'add_args' ] = array('s' => get_query_var('s'));
@@ -170,8 +170,8 @@ if ( ! function_exists( 'habib_list_posts_pagination' ) ):
                 'current'   => max( 1, get_query_var( 'paged' ) ),
                 'total'     => $query->max_num_pages,
                 'type'      => 'array',
-                'prev_text' => esc_html__( 'Prev.', 'maacuni' ),
-                'next_text' => esc_html__( 'Next', 'maacuni' )
+                'prev_text' => esc_html__( 'Prev.', 'habib' ),
+                'next_text' => esc_html__( 'Next', 'habib' )
             ) );
 
             $pagination = '<ul class="pagination"><li>';
@@ -211,7 +211,7 @@ if (!function_exists('habib_post_meta')) :
             <?php if ( habib_option( 'tt-post-meta', 'post-category', TRUE ) ) : ?>
                 <li>
                     <span class="posted-in">
-                        <?php echo get_the_category_list(esc_html_x(', ', 'Used between list items, there is a space after the comma.', 'maacuni'));
+                        <?php echo get_the_category_list(esc_html_x(', ', 'Used between list items, there is a space after the comma.', 'habib'));
                         ?>
                     </span>
                 </li>
@@ -228,10 +228,10 @@ if (!function_exists('habib_post_meta')) :
                     <span class="post-comments-number">
                         <?php
                         comments_popup_link(
-                            esc_html__('No Comment', 'maacuni'),
-                            esc_html__('1 Comment', 'maacuni'),
-                            esc_html__('% Comments', 'maacuni'), '',
-                            esc_html__('Comments are Closed', 'maacuni')
+                            esc_html__('No Comment', 'habib'),
+                            esc_html__('1 Comment', 'habib'),
+                            esc_html__('% Comments', 'habib'), '',
+                            esc_html__('Comments are Closed', 'habib')
                         ); ?>
                     </span>
                 </li>
@@ -247,7 +247,7 @@ if (!function_exists('habib_post_meta')) :
                 <?php endif;
             endif; ?>
 
-            <?php echo edit_post_link(esc_html__('Edit Post', 'maacuni'), '<li class="edit-link">', '</li>') ?>
+            <?php echo edit_post_link(esc_html__('Edit Post', 'habib'), '<li class="edit-link">', '</li>') ?>
             
         </ul>
     <?php
@@ -300,21 +300,21 @@ if (!function_exists('habib_breadcrumbs')) :
         <nav aria-label="breadcrumb">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="<?php echo esc_url(site_url()); ?>"><?php esc_html_e('Home', 'maacuni') ?></a>
+                    <a href="<?php echo esc_url(site_url()); ?>"><?php esc_html_e('Home', 'habib') ?></a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                     <?php if( is_tag() ) { ?>
-                    <?php esc_html_e('Posts Tagged ', 'maacuni') ?><span class="raquo">/</span><?php single_tag_title(); echo('/'); ?>
+                    <?php esc_html_e('Posts Tagged ', 'habib') ?><span class="raquo">/</span><?php single_tag_title(); echo('/'); ?>
                     <?php } elseif (is_day()) { ?>
-                    <?php esc_html_e('Posts made in', 'maacuni') ?> <?php echo esc_html(get_the_time('F jS, Y')); ?>
+                    <?php esc_html_e('Posts made in', 'habib') ?> <?php echo esc_html(get_the_time('F jS, Y')); ?>
                     <?php } elseif (is_month()) { ?>
-                    <?php esc_html_e('Posts made in', 'maacuni') ?> <?php echo esc_html(get_the_time('F, Y')); ?>
+                    <?php esc_html_e('Posts made in', 'habib') ?> <?php echo esc_html(get_the_time('F, Y')); ?>
                     <?php } elseif (is_year()) { ?>
-                    <?php esc_html_e('Posts made in', 'maacuni') ?> <?php echo esc_html(get_the_time('Y')); ?>
+                    <?php esc_html_e('Posts made in', 'habib') ?> <?php echo esc_html(get_the_time('Y')); ?>
                     <?php } elseif (is_search()) { ?>
-                    <?php esc_html_e('Search results for', 'maacuni') ?> <?php the_search_query() ?>
+                    <?php esc_html_e('Search results for', 'habib') ?> <?php the_search_query() ?>
                     <?php } elseif (is_404()) { ?>
-                    <?php esc_html_e('404', 'maacuni') ?>
+                    <?php esc_html_e('404', 'habib') ?>
                     <?php } elseif (is_single()) { ?>
                     <?php $category = get_the_category();
                     if ( $category ) { 
@@ -344,14 +344,14 @@ if (!function_exists('habib_breadcrumbs')) :
                         global $wp_query;
                         $curauth = $wp_query->get_queried_object();
 
-                        esc_html_e('Posts by: ', 'maacuni'); echo ' ', esc_html($curauth->nickname);
+                        esc_html_e('Posts by: ', 'habib'); echo ' ', esc_html($curauth->nickname);
 
                     } elseif (is_page()) { 
                         echo get_the_title(); 
                     } elseif (is_home()) { 
-                        esc_html_e('Blog', 'maacuni');
+                        esc_html_e('Blog', 'habib');
                     } elseif (class_exists('WooCommerce') and (is_shop())){
-                        esc_html_e('Shop', 'maacuni');
+                        esc_html_e('Shop', 'habib');
                     } ?>  
                 </li>
             </ul>
@@ -372,38 +372,38 @@ if (!function_exists('habib_page_header_section_title')) :
         if (is_archive()) :
             if (is_day()) :
                 $archive_title = get_the_time('d F, Y');
-                $page_header_title = sprintf(esc_html__('Archive of: %s', 'maacuni'), $archive_title);
+                $page_header_title = sprintf(esc_html__('Archive of: %s', 'habib'), $archive_title);
             elseif (is_month()) :
                 $archive_title = get_the_time('F Y');
-                $page_header_title = sprintf(esc_html__('Archive of: %s', 'maacuni'), $archive_title);
+                $page_header_title = sprintf(esc_html__('Archive of: %s', 'habib'), $archive_title);
             elseif (is_year()) :
                 $archive_title = get_the_time('Y');
-                $page_header_title = sprintf(esc_html__('Archive of: %s', 'maacuni'), $archive_title);
+                $page_header_title = sprintf(esc_html__('Archive of: %s', 'habib'), $archive_title);
             endif;
         endif;
 
         if (is_404()) :
-            $page_header_title = esc_html__('404 Not Found', 'maacuni');
+            $page_header_title = esc_html__('404 Not Found', 'habib');
         endif;
 
         if (is_search()) :
-            $page_header_title = sprintf(esc_html__('Search result for: "%s"', 'maacuni'), get_search_query());
+            $page_header_title = sprintf(esc_html__('Search result for: "%s"', 'habib'), get_search_query());
         endif;
 
         if (is_category()) :
-            $page_header_title = sprintf(esc_html__('Category: %s', 'maacuni'), $tt_query->name);
+            $page_header_title = sprintf(esc_html__('Category: %s', 'habib'), $tt_query->name);
         endif;
 
         if (is_tag()) :
-            $page_header_title = sprintf(esc_html__('Tag: %s', 'maacuni'), $tt_query->name);
+            $page_header_title = sprintf(esc_html__('Tag: %s', 'habib'), $tt_query->name);
         endif;
 
         if (is_author()) :
-            $page_header_title = sprintf(esc_html__('Posts of: %s', 'maacuni'), $tt_query->display_name);
+            $page_header_title = sprintf(esc_html__('Posts of: %s', 'habib'), $tt_query->display_name);
         endif;
 
         if (is_tax()) {
-            $page_header_title = sprintf(esc_html__('Taxonomy: %s', 'maacuni'), $tt_query->name);
+            $page_header_title = sprintf(esc_html__('Taxonomy: %s', 'habib'), $tt_query->name);
         }
 
         if (is_page()) :
@@ -432,11 +432,11 @@ if (!function_exists('habib_page_header_section_title')) :
 
         if ( class_exists( 'WooCommerce' ) ) {
             if ( is_product_category() ) {
-                $page_header_title = sprintf( esc_html__( 'Category: %s', 'maacuni' ), $tt_query->name );
+                $page_header_title = sprintf( esc_html__( 'Category: %s', 'habib' ), $tt_query->name );
             }
 
             if ( is_product_tag() ) {
-                $page_header_title = sprintf( esc_html__( 'Tag: %s', 'maacuni' ), $tt_query->name );
+                $page_header_title = sprintf( esc_html__( 'Tag: %s', 'habib' ), $tt_query->name );
             }
         }
 
@@ -565,7 +565,7 @@ if (!function_exists("habib_comments_list")) :
                 ?>
 
                 <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-                <p><?php esc_html_e('Pingback:', 'maacuni'); ?> <?php comment_author_link(); ?> <?php edit_comment_link(esc_html__('(Edit)', 'maacuni'), '<span class="edit-link">', '</span>'); ?></p>
+                <p><?php esc_html_e('Pingback:', 'habib'); ?> <?php comment_author_link(); ?> <?php edit_comment_link(esc_html__('(Edit)', 'habib'), '<span class="edit-link">', '</span>'); ?></p>
 
                 <?php
                 break;
@@ -587,12 +587,12 @@ if (!function_exists("habib_comments_list")) :
                         <div class="comment-meta media-heading">
                             <h4>
                                 <span class="author-name">
-                                    <?php esc_html_e('By', 'maacuni'); ?>
+                                    <?php esc_html_e('By', 'habib'); ?>
                                     <strong><?php echo esc_html(get_comment_author()); ?></strong>
                                 </span>
                                 <time datetime="<?php echo get_comment_date('Y-m-d'); ?>">
                                     <?php echo get_comment_date(); ?> <?php echo get_comment_time(); ?>
-                                    <?php edit_comment_link(esc_html__('Edit', 'maacuni'), '<small class="edit-link">', '</small>'); //edit link
+                                    <?php edit_comment_link(esc_html__('Edit', 'habib'), '<small class="edit-link">', '</small>'); //edit link
                                     ?>
                                 </time>
                             </h4>
@@ -602,7 +602,7 @@ if (!function_exists("habib_comments_list")) :
                     <div class="media-body">
                         <?php if ('0' == $comment->comment_approved) { ?>
                             <div class="alert alert-info">
-                                <?php esc_html_e('Your comment is awaiting moderation.', 'maacuni'); ?>
+                                <?php esc_html_e('Your comment is awaiting moderation.', 'habib'); ?>
                             </div>
                         <?php } ?>
 
@@ -613,7 +613,7 @@ if (!function_exists("habib_comments_list")) :
 
                         <span class="reply">
                             <?php comment_reply_link(array_merge($args, array(
-                                'reply_text' => esc_html__('Reply', 'maacuni'),
+                                'reply_text' => esc_html__('Reply', 'habib'),
                                 'depth'      => $depth,
                                 'max_depth'  => $args[ 'max_depth' ]
                             ))); ?>
@@ -794,28 +794,28 @@ if (! function_exists('habib_blog_thumb_size')) :
         $blog_sidebar = habib_option('blog-sidebar', false, 'right-sidebar');
 
 
-        if (($blog_sidebar == 'no-sidebar' || !is_active_sidebar('maacuni-blog-sidebar')) && ! is_archive()) {
+        if (($blog_sidebar == 'no-sidebar' || !is_active_sidebar('habib-blog-sidebar')) && ! is_archive()) {
             if( (is_sticky() && $habib_blog_post_count == 1) ) {
-                $blog_thumbnail = 'maacuni-thumbnail-portrait'; 
+                $blog_thumbnail = 'habib-thumbnail-portrait';
             } elseif (is_single() || $blog_column == 1) {
-                $blog_thumbnail = 'maacuni-thumbnail-large';
+                $blog_thumbnail = 'habib-thumbnail-large';
             } elseif($blog_column == 2 ){
-                $blog_thumbnail = 'maacuni-thumbnail-medium';
+                $blog_thumbnail = 'habib-thumbnail-medium';
             } else{
-                $blog_thumbnail = 'maacuni-thumbnail';
+                $blog_thumbnail = 'habib-thumbnail';
             }
         } else {
             if( (is_sticky() && $habib_blog_post_count == 1) || ($blog_column == 1 && $template_base != 'blog-grid-left-sidebar.php' && $template_base != 'blog-grid-right-sidebar.php' && $template_base != 'blog-sticky.php' && ! is_single()) || is_single()) {
-                $blog_thumbnail = 'maacuni-thumbnail-large';
+                $blog_thumbnail = 'habib-thumbnail-large';
             } else if(is_archive()) {
-                $blog_thumbnail = 'maacuni-thumbnail-large';
+                $blog_thumbnail = 'habib-thumbnail-large';
             } else{
-                $blog_thumbnail = 'maacuni-thumbnail';
+                $blog_thumbnail = 'habib-thumbnail';
             }
         }
 
         if($template_base == 'blog-left-sidebar.php' || $template_base == 'blog-right-sidebar.php'){
-            $blog_thumbnail = 'maacuni-thumbnail-large';
+            $blog_thumbnail = 'habib-thumbnail-large';
         }
 
         return $blog_thumbnail;
@@ -832,12 +832,12 @@ if (! function_exists('habib_number_shorten')) {
         if (!isset($divisors)) {
             $divisors = array(
                 pow(1000, 0) => '', // 1000^0 == 1
-                pow(1000, 1) => esc_html__('K', 'maacuni'), // Thousand
-                pow(1000, 2) => esc_html__('M', 'maacuni'), // Million
-                pow(1000, 3) => esc_html__('B', 'maacuni'), // Billion
-                pow(1000, 4) => esc_html__('T', 'maacuni'), // Trillion
-                pow(1000, 5) => esc_html__('Qa', 'maacuni'), // Quadrillion
-                pow(1000, 6) => esc_html__('Qi', 'maacuni') // Quintillion
+                pow(1000, 1) => esc_html__('K', 'habib'), // Thousand
+                pow(1000, 2) => esc_html__('M', 'habib'), // Million
+                pow(1000, 3) => esc_html__('B', 'habib'), // Billion
+                pow(1000, 4) => esc_html__('T', 'habib'), // Trillion
+                pow(1000, 5) => esc_html__('Qa', 'habib'), // Quadrillion
+                pow(1000, 6) => esc_html__('Qi', 'habib') // Quintillion
             );
         }
 

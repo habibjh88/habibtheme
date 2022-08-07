@@ -39,9 +39,9 @@
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
         'allow_sub_menu'       => TRUE,
         // Show the sections below the admin menu item or not
-        'menu_title'           => sprintf( esc_html__( '%s Options', 'maacuni' ), $theme->get( 'Name' ) ),
+        'menu_title'           => sprintf( esc_html__( '%s Options', 'habib' ), $theme->get( 'Name' ) ),
         // Show the sections below the admin page title or not
-        'page_title'           => sprintf( esc_html__( '%s Theme Options', 'maacuni' ), $theme->get( 'Name' ) ),
+        'page_title'           => sprintf( esc_html__( '%s Theme Options', 'habib' ), $theme->get( 'Name' ) ),
         // You will need to generate a Google API key to use this feature.
         // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
         'google_api_key'       => '',
@@ -98,7 +98,7 @@
         // Global shut-off for dynamic CSS output by the framework. Will also disable google fonts output
         'output_tag'           => TRUE,
         // Allows dynamic CSS to be generated for customizer and google fonts, but stops the dynamic CSS from going to the head
-        'footer_credit'        => sprintf( esc_html__( '%s Theme Options', 'maacuni' ), $theme->get( 'Name' ) ),
+        'footer_credit'        => sprintf( esc_html__( '%s Theme Options', 'habib' ), $theme->get( 'Name' ) ),
         // Disable the footer credit of Redux. Please leave if you can help it.
 
         // FUTURE -> Not in use yet, but reserved or partially implemented. Use at your own risk.
@@ -152,16 +152,16 @@
     // General Settings
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-cogs',
-        'title'  => esc_html__('General Settings', 'maacuni'),
+        'title'  => esc_html__('General Settings', 'habib'),
         'fields' => array(
 
             array(
                 'id'       => 'rtl',
                 'type'     => 'switch',
-                'title'    => esc_html__('RTL', 'maacuni'),
-                'subtitle' => esc_html__('Enable or Disabled RTL', 'maacuni'),
-                'on'       => esc_html__('Enable', 'maacuni'),
-                'off'      => esc_html__('Disabled', 'maacuni'),
+                'title'    => esc_html__('RTL', 'habib'),
+                'subtitle' => esc_html__('Enable or Disabled RTL', 'habib'),
+                'on'       => esc_html__('Enable', 'habib'),
+                'off'      => esc_html__('Disabled', 'habib'),
                 'default'  => FALSE,
             )
         )
@@ -171,30 +171,30 @@
     // Header settings
     Redux::setSection( $opt_name, array(
         'icon'   => 'el el-website',
-        'title'  => esc_html__( 'Header Settings', 'maacuni' ),
+        'title'  => esc_html__( 'Header Settings', 'habib' ),
         'fields' => array(
             
             // header style
             array(
                 'id'       => 'header-style',
                 'type'     => 'image_select',
-                'title'    => esc_html__( 'Header styles', 'maacuni' ),
-                'subtitle' => esc_html__( 'Select Header Style.', 'maacuni' ),
+                'title'    => esc_html__( 'Header styles', 'habib' ),
+                'subtitle' => esc_html__( 'Select Header Style.', 'habib' ),
                 'options'  => array(
                     'header-default'   => array(
-                        'alt' => esc_html__('Header default', 'maacuni'),
+                        'alt' => esc_html__('Header default', 'habib'),
                         'img' => get_template_directory_uri() . '/images/header-default.jpg'
                     ),
                     'header-transparent'   => array(
-                        'alt' => esc_html__('Header Transparent', 'maacuni'),
+                        'alt' => esc_html__('Header Transparent', 'habib'),
                         'img' => get_template_directory_uri() . '/images/header-transparent.jpg'
                     ),
                     'header-left-menu'   => array(
-                        'alt' => esc_html__('Header Menu Left', 'maacuni'),
+                        'alt' => esc_html__('Header Menu Left', 'habib'),
                         'img' => get_template_directory_uri() . '/images/header-left.jpg'
                     ),
                     'no-header'   => array(
-                        'alt' => esc_html__('No Header', 'maacuni'),
+                        'alt' => esc_html__('No Header', 'habib'),
                         'img' => get_template_directory_uri() . '/images/no-header.jpg'
                     )
                 ),
@@ -210,17 +210,17 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-website-alt',
-        'title'  => esc_html__('Header Topbar', 'maacuni'),
+        'title'  => esc_html__('Header Topbar', 'habib'),
         'subsection'       => true,
         'fields' => array(
             // header top wrapper
             array(
                 'id'       => 'header-top-visibility',
                 'type'     => 'switch',
-                'title'    => esc_html__('Header topbar visibility', 'maacuni'),
-                'subtitle' => esc_html__('Visible or Hidden header topbar', 'maacuni'),
-                'on'       => esc_html__('Visible', 'maacuni'),
-                'off'      => esc_html__('Hidden', 'maacuni'),
+                'title'    => esc_html__('Header topbar visibility', 'habib'),
+                'subtitle' => esc_html__('Visible or Hidden header topbar', 'habib'),
+                'on'       => esc_html__('Visible', 'habib'),
+                'off'      => esc_html__('Hidden', 'habib'),
                 'default'  => false,
             ),
 
@@ -228,10 +228,10 @@
                 'id'       => 'news-feed-visibility',
                 'type'     => 'switch',
                 'required' => array('header-top-visibility', '=', '1'),
-                'title'    => esc_html__('News Feed visibility', 'maacuni'),
-                'subtitle' => esc_html__('Visible or Hidden topbar newsfeed', 'maacuni'),
-                'on'       => esc_html__('Visible', 'maacuni'),
-                'off'      => esc_html__('Hidden', 'maacuni'),
+                'title'    => esc_html__('News Feed visibility', 'habib'),
+                'subtitle' => esc_html__('Visible or Hidden topbar newsfeed', 'habib'),
+                'on'       => esc_html__('Visible', 'habib'),
+                'off'      => esc_html__('Hidden', 'habib'),
                 'default'  => TRUE,
             ),
 
@@ -239,55 +239,55 @@
                 'id'       => 'prefix-title',
                 'type'     => 'text',
                 'required' => array('news-feed-visibility', '=', '1'),
-                'title'    => esc_html__('News Feed prefix', 'maacuni'),
-                'subtitle' => esc_html__('Change news prefix text', 'maacuni'),
-                'default'  => esc_html__('Press:', 'maacuni')
+                'title'    => esc_html__('News Feed prefix', 'habib'),
+                'subtitle' => esc_html__('Change news prefix text', 'habib'),
+                'default'  => esc_html__('Press:', 'habib')
             ),
 
             array(
                 'id'       => 'post-source',
                 'type'     => 'select',
                 'required' => array('news-feed-visibility', '=', '1'),
-                'title'    => esc_html__('Select post source', 'maacuni'),
+                'title'    => esc_html__('Select post source', 'habib'),
                 'options'  => array(
                     'latest-post' => 'Latest Post',
                     'selected-post' => 'Selected Post',
                     'category-post' => 'From Category'
                 ),
                 'default'  => 'latest-post',
-                'subtitle' => esc_html__('Select post source', 'maacuni'),
+                'subtitle' => esc_html__('Select post source', 'habib'),
             ),
 
             array(
                 'id'       => 'post-lists',
                 'type'     => 'select',
                 'required' => array('post-source', '=', 'selected-post'),
-                'title'    => esc_html__('Select posts', 'maacuni'),
+                'title'    => esc_html__('Select posts', 'habib'),
                 'data'     => 'posts',
                 'args'     => array(
                     'post_type'      => 'post',
                     'posts_per_page' => -1
                 ),
                 'multi'    => true,
-                'subtitle' => esc_html__('Select post to show on breaking news', 'maacuni'),
+                'subtitle' => esc_html__('Select post to show on breaking news', 'habib'),
             ),
 
             array(
                 'id'       => 'category-lists',
                 'type'     => 'select',
                 'required' => array('post-source', '=', 'category-post'),
-                'title'    => esc_html__('Select a category', 'maacuni'),
+                'title'    => esc_html__('Select a category', 'habib'),
                 'data'     => 'categories',
                 'multi'    => true,
-                'subtitle' => esc_html__('Select a cateogry to show selected category post', 'maacuni'),
+                'subtitle' => esc_html__('Select a cateogry to show selected category post', 'habib'),
             ),
 
             array(
                 'id'       => 'news-feed-limit',
                 'type'     => 'text',
                 'required' => array('post-source', '=', array('category-post', 'latest-post')),
-                'title'    => esc_html__('News feed limit', 'maacuni'),
-                'subtitle' => esc_html__('Change post limit from header topbar', 'maacuni'),
+                'title'    => esc_html__('News feed limit', 'habib'),
+                'subtitle' => esc_html__('Change post limit from header topbar', 'habib'),
                 'default'  => 5
             ),
 
@@ -295,8 +295,8 @@
                 'id'       => 'header-contact',
                 'type'     => 'editor',
                 'required' => array('header-top-visibility', '=', '1'),
-                'title'    => esc_html__('Header contact', 'maacuni'),
-                'subtitle' => esc_html__('Change header contact info', 'maacuni'),
+                'title'    => esc_html__('Header contact', 'habib'),
+                'subtitle' => esc_html__('Change header contact info', 'habib'),
                 'default'  => '<ul><li><i class="fa fas fa-phone"></i> +123 125 145</li><li><a href="mailto:username@host.com"><i class="fas fa-envelope"></i> username@host.com</a></li></ul>'
             ),
 
@@ -304,10 +304,10 @@
                 'id'       => 'language-switcher-visibility',
                 'type'     => 'switch',
                 'required' => array('header-top-visibility', '=', '1'),
-                'title'    => esc_html__('Language switcher visibility, N.B: need WPML to get the output', 'maacuni'),
-                'subtitle' => esc_html__('Visible or Hidden language switcher', 'maacuni'),
-                'on'       => esc_html__('Visible', 'maacuni'),
-                'off'      => esc_html__('Hidden', 'maacuni'),
+                'title'    => esc_html__('Language switcher visibility, N.B: need WPML to get the output', 'habib'),
+                'subtitle' => esc_html__('Visible or Hidden language switcher', 'habib'),
+                'on'       => esc_html__('Visible', 'habib'),
+                'off'      => esc_html__('Hidden', 'habib'),
                 'default'  => TRUE,
             )
         )
@@ -318,28 +318,28 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-home-alt',
-        'title'  => esc_html__('Header Menu', 'maacuni'),
+        'title'  => esc_html__('Header Menu', 'habib'),
         'subsection'       => true,
         'fields' => array(
             array(
                 'id'       => 'menu-alignment',
                 'type'     => 'select',
-                'title'    => esc_html__('Menu Alignment', 'maacuni'),
+                'title'    => esc_html__('Menu Alignment', 'habib'),
                 'options'  => array(
                     'justify-content-start' => 'Left',
                     'justify-content-center' => 'Center',
                     'justify-content-end' => 'Right'
                 ),
                 'default'  => 'justify-content-end',
-                'subtitle' => esc_html__('Select menu alignment', 'maacuni'),
+                'subtitle' => esc_html__('Select menu alignment', 'habib'),
             ),
 
             // Menu typography
             array(
                 'id'       => 'menu-typography',
                 'type'     => 'typography',
-                'title'    => esc_html__( 'Menu Typography', 'maacuni' ),
-                'subtitle' => esc_html__( 'Specify the menu font properties.', 'maacuni' ),
+                'title'    => esc_html__( 'Menu Typography', 'habib' ),
+                'subtitle' => esc_html__( 'Specify the menu font properties.', 'habib' ),
                 'google'   => true,
                 'font-family' => true,
                 'text-align' => false,
@@ -357,40 +357,40 @@
             array(
                 'id'       => 'menu-bg-color',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Menu background color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for menu background.', 'maacuni' )
+                'title'    => esc_html__( 'Menu background color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for menu background.', 'habib' )
             ),
 
             // menu color
             array(
                 'id'       => 'menu-color',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Menu font color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for menu.', 'maacuni' )
+                'title'    => esc_html__( 'Menu font color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for menu.', 'habib' )
             ),
 
             // menu color
             array(
                 'id'       => 'menu-hover-color',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Menu hover color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for menu hover.', 'maacuni' )
+                'title'    => esc_html__( 'Menu hover color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for menu hover.', 'habib' )
             ),
 
             // mobile menu background color
             array(
                 'id'       => 'mobile-menu-bg-color',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Mobile menu background color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for mobile menu background.', 'maacuni' )
+                'title'    => esc_html__( 'Mobile menu background color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for mobile menu background.', 'habib' )
             ),
 
             // mobile menu color
             array(
                 'id'       => 'mobile-menu-color',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Mobile menu font color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for mobile menu.', 'maacuni' )
+                'title'    => esc_html__( 'Mobile menu font color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for mobile menu.', 'habib' )
             )
         )
     ));
@@ -401,25 +401,25 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-search',
-        'title'  => esc_html__('Header Search', 'maacuni'),
+        'title'  => esc_html__('Header Search', 'habib'),
         'subsection'       => true,
         'fields' => array(
             // header search visibility
             array(
                 'id'       => 'search-visibility',
                 'type'     => 'switch',
-                'title'    => esc_html__('Search visibility', 'maacuni'),
-                'subtitle' => esc_html__('Visible or Hidden search button', 'maacuni'),
-                'on'       => esc_html__('Visible', 'maacuni'),
-                'off'      => esc_html__('Hidden', 'maacuni'),
+                'title'    => esc_html__('Search visibility', 'habib'),
+                'subtitle' => esc_html__('Visible or Hidden search button', 'habib'),
+                'on'       => esc_html__('Visible', 'habib'),
+                'off'      => esc_html__('Hidden', 'habib'),
                 'default'  => FALSE,
             ),
 
             array(
                 'id'       => 'search-bg-color',
                 'type'     => 'color',
-                'title'    => esc_html__('Search Background Color', 'maacuni'),
-                'desc' => esc_html__('If you want, you can change search background color.', 'maacuni'),
+                'title'    => esc_html__('Search Background Color', 'habib'),
+                'desc' => esc_html__('If you want, you can change search background color.', 'habib'),
                 'required' => array('search-visibility', '=', '1'),
                 
             ),
@@ -427,13 +427,13 @@
             array(
                 'id'       => 'tt-search-result',
                 'type'     => 'checkbox',
-                'title'    => esc_html__( 'Search Settings', 'maacuni' ),
+                'title'    => esc_html__( 'Search Settings', 'habib' ),
                 'required' => array('search-visibility', '=', '1'),
-                'subtitle' => esc_html__( 'Check post type to show search result', 'maacuni' ),
+                'subtitle' => esc_html__( 'Check post type to show search result', 'habib' ),
                 'options'  => array(
-                    'post-search'         => esc_html__( 'Post', 'maacuni' ),
-                    'tt-team'     => esc_html__( 'Team', 'maacuni' ),
-                    'tt-portfolio'     => esc_html__( 'Portfolio', 'maacuni' )
+                    'post-search'         => esc_html__( 'Post', 'habib' ),
+                    'tt-team'     => esc_html__( 'Team', 'habib' ),
+                    'tt-portfolio'     => esc_html__( 'Portfolio', 'habib' )
                 ),
                 'default'  => array(
                     'post-search' => '1',
@@ -450,7 +450,7 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-lines',
-        'title'  => esc_html__('Offcanvas Menu', 'maacuni'),
+        'title'  => esc_html__('Offcanvas Menu', 'habib'),
         'subsection'       => true,
         'fields' => array(
 
@@ -458,18 +458,18 @@
             array(
                 'id'       => 'offcanvas-visibility',
                 'type'     => 'switch',
-                'title'    => esc_html__('Offcanvas visibility', 'maacuni'),
-                'subtitle' => esc_html__('Visible or Hidden search button', 'maacuni'),
-                'on'       => esc_html__('Visible', 'maacuni'),
-                'off'      => esc_html__('Hidden', 'maacuni'),
+                'title'    => esc_html__('Offcanvas visibility', 'habib'),
+                'subtitle' => esc_html__('Visible or Hidden search button', 'habib'),
+                'on'       => esc_html__('Visible', 'habib'),
+                'off'      => esc_html__('Hidden', 'habib'),
                 'default'  => false,
             ),
 
             array(
                 'id'       => 'offcanvas-bg',
                 'type'     => 'color',
-                'title'    => esc_html__('Offcanvas Background', 'maacuni'),
-                'desc' => esc_html__('If you want, you can change search offcanvas background color.', 'maacuni'),
+                'title'    => esc_html__('Offcanvas Background', 'habib'),
+                'desc' => esc_html__('If you want, you can change search offcanvas background color.', 'habib'),
                 'required' => array('offcanvas-visibility', '=', '1'),
             ),
         )
@@ -481,15 +481,15 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-slideshare',
-        'title'  => esc_html__('Logo Settings', 'maacuni'),
+        'title'  => esc_html__('Logo Settings', 'habib'),
         'fields' => array(
             array(
                 'id'       => 'logo-type',
                 'type'     => 'switch',
-                'title'    => esc_html__('Logo Type', 'maacuni'),
-                'subtitle' => esc_html__('You can set text or image logo', 'maacuni'),
-                'on'       => esc_html__('Image Logo', 'maacuni'),
-                'off'      => esc_html__('Text Logo', 'maacuni'),
+                'title'    => esc_html__('Logo Type', 'habib'),
+                'subtitle' => esc_html__('You can set text or image logo', 'habib'),
+                'on'       => esc_html__('Image Logo', 'habib'),
+                'off'      => esc_html__('Text Logo', 'habib'),
                 'default'  => TRUE,
             ),
 
@@ -497,15 +497,15 @@
                 'id'       => 'text-logo',
                 'type'     => 'text',
                 'required' => array('logo-type', '=', '0'),
-                'title'    => esc_html__('Logo Text', 'maacuni'),
-                'subtitle' => esc_html__('Change your logo text', 'maacuni')
+                'title'    => esc_html__('Logo Text', 'habib'),
+                'subtitle' => esc_html__('Change your logo text', 'habib')
             ),
 
             array(
                 'id'       => 'text-logo-typography',
                 'type'     => 'typography',
-                'title'    => esc_html__( 'Logo Typography', 'maacuni' ),
-                'subtitle' => esc_html__( 'Specify the logo font properties.', 'maacuni' ),
+                'title'    => esc_html__( 'Logo Typography', 'habib' ),
+                'subtitle' => esc_html__( 'Specify the logo font properties.', 'habib' ),
                 'google'   => true,
                 'text-align' => false,
                 'required' => array('logo-type', '=', '0'),
@@ -523,8 +523,8 @@
                 'type'     => 'media',
                 'preview'  => 'true',
                 'required' => array('logo-type', '=', '1'),
-                'title'    => esc_html__('Site Logo.', 'maacuni'),
-                'subtitle' => esc_html__('Change Site logo dimension: 80px &times; 80px', 'maacuni')
+                'title'    => esc_html__('Site Logo.', 'habib'),
+                'subtitle' => esc_html__('Change Site logo dimension: 80px &times; 80px', 'habib')
             ),
 
             array(
@@ -532,8 +532,8 @@
                 'type'     => 'media',
                 'preview'  => 'true',
                 'required' => array('logo-type', '=', '1'),
-                'title'    => esc_html__('Retina Logo Image (High Density)', 'maacuni'),
-                'subtitle' => esc_html__('Change Retina logo dimension: 160px &times; 160px', 'maacuni')
+                'title'    => esc_html__('Retina Logo Image (High Density)', 'habib'),
+                'subtitle' => esc_html__('Change Retina logo dimension: 160px &times; 160px', 'habib')
             ),
             
             array(
@@ -541,8 +541,8 @@
                 'type'     => 'media',
                 'preview'  => 'true',
                 'required' => array('logo-type', '=', '1'),
-                'title'    => esc_html__('Site Mobile Logo.', 'maacuni'),
-                'subtitle' => esc_html__('Change site mobile logo dimension: 80px &times; 80px', 'maacuni')
+                'title'    => esc_html__('Site Mobile Logo.', 'habib'),
+                'subtitle' => esc_html__('Change site mobile logo dimension: 80px &times; 80px', 'habib')
             ),
 
             array(
@@ -550,8 +550,8 @@
                 'type'     => 'media',
                 'preview'  => 'true',
                 'required' => array('logo-type', '=', '1'),
-                'title'    => esc_html__('Retina Mobile Logo Image (High Density)', 'maacuni'),
-                'subtitle' => esc_html__('Change retina mobile logo dimension: 160px &times; 160px', 'maacuni')
+                'title'    => esc_html__('Retina Mobile Logo Image (High Density)', 'habib'),
+                'subtitle' => esc_html__('Change retina mobile logo dimension: 160px &times; 160px', 'habib')
             ),
             
             array(
@@ -561,9 +561,9 @@
                 'mode'           => 'margin',
                 'units'          => 'px',
                 'units_extended' => 'false',
-                'title'          => esc_html__('Margin Option', 'maacuni'),
-                'subtitle'       => esc_html__('You can change logo margin if needed.', 'maacuni'),
-                'desc'           => esc_html__('Change top, right, bottom and left value in px, e.g: 10', 'maacuni')
+                'title'          => esc_html__('Margin Option', 'habib'),
+                'subtitle'       => esc_html__('You can change logo margin if needed.', 'habib'),
+                'desc'           => esc_html__('Change top, right, bottom and left value in px, e.g: 10', 'habib')
             )
         )
     ));
@@ -574,19 +574,19 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-picture',
-        'title'  => esc_html__('Page Header Settings', 'maacuni'),
+        'title'  => esc_html__('Page Header Settings', 'habib'),
         'fields' => array(
 
             array(
                 'id'       => 'page-header-visibility',
                 'type'     => 'select',
-                'title'    => esc_html__('Page header visibility', 'maacuni'),
-                'subtitle' => esc_html__('Visible or Hidden all page header section', 'maacuni'),
+                'title'    => esc_html__('Page header visibility', 'habib'),
+                'subtitle' => esc_html__('Visible or Hidden all page header section', 'habib'),
                 'options'  => array(
-                    'header-section-show' => esc_html__('Page Header Section Show', 'maacuni'),
-                    'header-section-hide' => esc_html__('Page Header Section Hide', 'maacuni')
+                    'header-section-show' => esc_html__('Page Header Section Show', 'habib'),
+                    'header-section-hide' => esc_html__('Page Header Section Hide', 'habib')
                 ),
-                'desc'     => esc_html__('Will show/hide background image, title and breadcrumb', 'maacuni'),
+                'desc'     => esc_html__('Will show/hide background image, title and breadcrumb', 'habib'),
                 'default'  => 'header-section-show'
             ),
 
@@ -594,8 +594,8 @@
                 'id'       => 'page-header-height-xlg',
                 'type'     => 'text',
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'title'    => esc_html__('Enter page header height for Extra large screen', 'maacuni'),
-                'subtitle' => esc_html__('This is optional field. If you would like to increase page header height then enter height by px. ', 'maacuni'),
+                'title'    => esc_html__('Enter page header height for Extra large screen', 'habib'),
+                'subtitle' => esc_html__('This is optional field. If you would like to increase page header height then enter height by px. ', 'habib'),
                 'default'  => '470px'
             ),
 
@@ -603,8 +603,8 @@
                 'id'       => 'page-header-height-lg',
                 'type'     => 'text',
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'title'    => esc_html__('Enter page header height for large screen', 'maacuni'),
-                'subtitle' => esc_html__('This is optional field. If you would like to increase page header height then enter height by px. ', 'maacuni'),
+                'title'    => esc_html__('Enter page header height for large screen', 'habib'),
+                'subtitle' => esc_html__('This is optional field. If you would like to increase page header height then enter height by px. ', 'habib'),
                 'default'  => '470px'
             ),
 
@@ -612,8 +612,8 @@
                 'id'       => 'page-header-height-md',
                 'type'     => 'text',
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'title'    => esc_html__('Enter page header height for medium screen', 'maacuni'),
-                'subtitle' => esc_html__('This is optional field. If you would like to increase page header height then enter height by px. ', 'maacuni'),
+                'title'    => esc_html__('Enter page header height for medium screen', 'habib'),
+                'subtitle' => esc_html__('This is optional field. If you would like to increase page header height then enter height by px. ', 'habib'),
                 'default'  => '400px'
             ),
 
@@ -621,8 +621,8 @@
                 'id'       => 'page-header-height-sm',
                 'type'     => 'text',
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'title'    => esc_html__('Enter page header height for small screen', 'maacuni'),
-                'subtitle' => esc_html__('This is optional field. If you would like to increase page header height then enter height by px. ', 'maacuni'),
+                'title'    => esc_html__('Enter page header height for small screen', 'habib'),
+                'subtitle' => esc_html__('This is optional field. If you would like to increase page header height then enter height by px. ', 'habib'),
                 'default'  => '300px'
             ),
 
@@ -630,54 +630,54 @@
                 'id'       => 'page-header-height-xs',
                 'type'     => 'text',
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'title'    => esc_html__('Enter page header height for mobile screen', 'maacuni'),
-                'subtitle' => esc_html__('This is optional field. If you would like to increase page header height then enter height by px. ', 'maacuni'),
+                'title'    => esc_html__('Enter page header height for mobile screen', 'habib'),
+                'subtitle' => esc_html__('This is optional field. If you would like to increase page header height then enter height by px. ', 'habib'),
                 'default'  => '250px'
             ),
 
             array(
                 'id'       => 'tt-page-title',
                 'type'     => 'switch',
-                'title'    => esc_html__('Page title', 'maacuni'),
+                'title'    => esc_html__('Page title', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'subtitle' => esc_html__('Show or Hide page title', 'maacuni'),
-                'on'       => esc_html__('Show', 'maacuni'),
-                'off'      => esc_html__('Hide', 'maacuni'),
+                'subtitle' => esc_html__('Show or Hide page title', 'habib'),
+                'on'       => esc_html__('Show', 'habib'),
+                'off'      => esc_html__('Hide', 'habib'),
                 'default'  => TRUE,
             ),
 
             array(
                 'id'       => 'tt-breadcrumb',
                 'type'     => 'switch',
-                'title'    => esc_html__('Breadcrumb', 'maacuni'),
+                'title'    => esc_html__('Breadcrumb', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'subtitle' => esc_html__('Show or Hide Your website Breadcrumb', 'maacuni'),
-                'on'       => esc_html__('Show', 'maacuni'),
-                'off'      => esc_html__('Hide', 'maacuni'),
+                'subtitle' => esc_html__('Show or Hide Your website Breadcrumb', 'habib'),
+                'on'       => esc_html__('Show', 'habib'),
+                'off'      => esc_html__('Hide', 'habib'),
                 'default'  => FALSE,
             ),
 
             array(
                 'id'       => 'tt-image-overlay',
                 'type'     => 'switch',
-                'title'    => esc_html__('Image Overlay', 'maacuni'),
+                'title'    => esc_html__('Image Overlay', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'subtitle' => esc_html__('Show or Hide image overlay', 'maacuni'),
-                'on'       => esc_html__('Show', 'maacuni'),
-                'off'      => esc_html__('Hide', 'maacuni'),
+                'subtitle' => esc_html__('Show or Hide image overlay', 'habib'),
+                'on'       => esc_html__('Show', 'habib'),
+                'off'      => esc_html__('Hide', 'habib'),
                 'default'  => TRUE,
             ),
 
             array(
                 'id'       => 'overlay-style',
                 'type'     => 'select',
-                'title'    => esc_html__('Choose overlay style', 'maacuni'),
+                'title'    => esc_html__('Choose overlay style', 'habib'),
                 'options'  => array(
-                    'default-style' => esc_html__('Default Style', 'maacuni'),
-                    'bottom-to-top-overlay' => esc_html__('Bottom To Top', 'maacuni')
+                    'default-style' => esc_html__('Default Style', 'habib'),
+                    'bottom-to-top-overlay' => esc_html__('Bottom To Top', 'habib')
                 ),
                 'required' => array('tt-image-overlay', '=', '1'),
-                'desc'     => esc_html__('Choose image overlay style', 'maacuni'),
+                'desc'     => esc_html__('Choose image overlay style', 'habib'),
                 'default'  => 'default-style'
             ),
 
@@ -685,9 +685,9 @@
                 'id'       => 'page_header_color',
                 'type'     => 'background',
                 'output'   => array('.page-header-section'),
-                'title'    => esc_html__('Background color', 'maacuni'),
+                'title'    => esc_html__('Background color', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'subtitle' => esc_html__('Select background color for page header, N.B: You have to remove all image to apply the changes', 'maacuni'),
+                'subtitle' => esc_html__('Select background color for page header, N.B: You have to remove all image to apply the changes', 'habib'),
                 'background-repeat' => false,
                 'background-attachment' => false,
                 'background-position' => false,
@@ -703,9 +703,9 @@
                 'mode'           => 'margin',
                 'units'          => 'px',
                 'units_extended' => 'false',
-                'title'          => esc_html__('Page Header Margin Option', 'maacuni'),
-                'subtitle'       => esc_html__('You can change page header margin if needed.', 'maacuni'),
-                'desc'           => esc_html__('Change top, right, bottom and left value in px, e.g: 10', 'maacuni')
+                'title'          => esc_html__('Page Header Margin Option', 'habib'),
+                'subtitle'       => esc_html__('You can change page header margin if needed.', 'habib'),
+                'desc'           => esc_html__('Change top, right, bottom and left value in px, e.g: 10', 'habib')
             ),
 
             array(
@@ -715,96 +715,96 @@
                 'mode'           => 'padding',
                 'units'          => 'px',
                 'units_extended' => 'false',
-                'title'          => esc_html__('Page Header Padding Option', 'maacuni'),
-                'subtitle'       => esc_html__('You can change page header padding if needed.', 'maacuni'),
-                'desc'           => esc_html__('Change top, right, bottom and left value in px, e.g: 10', 'maacuni')
+                'title'          => esc_html__('Page Header Padding Option', 'habib'),
+                'subtitle'       => esc_html__('You can change page header padding if needed.', 'habib'),
+                'desc'           => esc_html__('Change top, right, bottom and left value in px, e.g: 10', 'habib')
             ),
 
             array(
                 'id'       => 'page-header-image',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('Page Header Background.', 'maacuni'),
+                'title'    => esc_html__('Page Header Background.', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'maacuni')
+                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'habib')
             ),
 
             array(
                 'id'       => 'product-header-image',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('Product Header Background.', 'maacuni'),
+                'title'    => esc_html__('Product Header Background.', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'maacuni')
+                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'habib')
             ),
 
             array(
                 'id'       => 'portfolio-header-image',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('Portfolio Header Background.', 'maacuni'),
+                'title'    => esc_html__('Portfolio Header Background.', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'maacuni')
+                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'habib')
             ),
 
             array(
                 'id'       => 'blog-header-image',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('Blog Header Background.', 'maacuni'),
+                'title'    => esc_html__('Blog Header Background.', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'maacuni')
+                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'habib')
             ),
 
             array(
                 'id'       => 'author-header-image',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('Author Header Background.', 'maacuni'),
+                'title'    => esc_html__('Author Header Background.', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'maacuni')
+                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'habib')
             ),
             array(
                 'id'       => 'category-header-image',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('Category Header Background.', 'maacuni'),
+                'title'    => esc_html__('Category Header Background.', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'maacuni')
+                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'habib')
             ),
 
             array(
                 'id'       => 'tag-header-image',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('Tag Header Background.', 'maacuni'),
+                'title'    => esc_html__('Tag Header Background.', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'maacuni')
+                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'habib')
             ),
             
             array(
                 'id'       => 'search-header-image',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('Search Header Background.', 'maacuni'),
+                'title'    => esc_html__('Search Header Background.', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'maacuni')
+                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'habib')
             ),
             array(
                 'id'       => 'archive-header-image',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('Archive Header Background.', 'maacuni'),
+                'title'    => esc_html__('Archive Header Background.', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'maacuni')
+                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'habib')
             ),
             array(
                 'id'       => 'header-404-image',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('404 Header Background.', 'maacuni'),
+                'title'    => esc_html__('404 Header Background.', 'habib'),
                 'required' => array('page-header-visibility', '=', 'header-section-show'),
-                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'maacuni')
+                'desc'     => esc_html__('Upload image from media library, dimension: 1920px x 450px', 'habib')
             )
         )
     ));
@@ -815,37 +815,37 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-brush',
-        'title'  => esc_html__('Preset color', 'maacuni'),
+        'title'  => esc_html__('Preset color', 'habib'),
         'fields' => array(
             array(
                 'id'       => 'body-bg-color',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Body background color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for the theme body background (default: #ffffff).', 'maacuni' ),
+                'title'    => esc_html__( 'Body background color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for the theme body background (default: #ffffff).', 'habib' ),
                 'default'  => '#ffffff',
             ),
 
             array(
                 'id'       => 'accent-color',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Site Accent Color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for the theme accent color (default: #021bdd).', 'maacuni' ),
-                'default'  => '#021bdd',
+                'title'    => esc_html__( 'Site Accent Color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for the theme accent color (default: #17a2b8).', 'habib' ),
+                'default'  => '#17a2b8',
             ),
 
             array(
                 'id'       => 'link-color',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Site Link Color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for all link (default: #021bdd).', 'maacuni' ),
+                'title'    => esc_html__( 'Site Link Color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for all link (default: #17a2b8).', 'habib' ),
                 'default'  => '#f26343',
             ),
 
             array(
                 'id'       => 'section-title-color',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Section title color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for section title (default: #2f2f2f).', 'maacuni' ),
+                'title'    => esc_html__( 'Section title color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for section title (default: #2f2f2f).', 'habib' ),
                 'default'  => '#2f2f2f',
             )
         )
@@ -857,15 +857,15 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-font',
-        'title'  => esc_html__('Typography', 'maacuni'),
+        'title'  => esc_html__('Typography', 'habib'),
         'fields' => array(
             
             // body typography
             array(
                 'id'       => 'body-typography',
                 'type'     => 'typography',
-                'title'    => esc_html__( 'Body Font', 'maacuni' ),
-                'subtitle' => esc_html__( 'Specify the body font properties.', 'maacuni' ),
+                'title'    => esc_html__( 'Body Font', 'habib' ),
+                'subtitle' => esc_html__( 'Specify the body font properties.', 'habib' ),
                 'google'   => true,
                 'text-align' => false,
                 'default'  => array(
@@ -882,8 +882,8 @@
             array(
                 'id'       => 'heading-typography',
                 'type'     => 'typography',
-                'title'    => esc_html__( 'Heading Font', 'maacuni' ),
-                'subtitle' => esc_html__( 'This settings for all heading font (h1, h2, h3, h4, h5, h6)', 'maacuni' ),
+                'title'    => esc_html__( 'Heading Font', 'habib' ),
+                'subtitle' => esc_html__( 'This settings for all heading font (h1, h2, h3, h4, h5, h6)', 'habib' ),
                 'google'   => true,
                 'all_styles' => true,
                 'text-align' => false,
@@ -900,8 +900,8 @@
             array(
                 'id'       => 'h1-typography',
                 'type'     => 'typography',
-                'title'    => esc_html__( 'H1 (Heading one)', 'maacuni' ),
-                'subtitle' => esc_html__( 'This settings only for H1', 'maacuni' ),
+                'title'    => esc_html__( 'H1 (Heading one)', 'habib' ),
+                'subtitle' => esc_html__( 'This settings only for H1', 'habib' ),
                 'font-family' => false,
                 'google'   => false,
                 'text-align' => false,
@@ -921,8 +921,8 @@
             array(
                 'id'       => 'h2-typography',
                 'type'     => 'typography',
-                'title'    => esc_html__( 'H2 (Heading two)', 'maacuni' ),
-                'subtitle' => esc_html__( 'This settings only for H2', 'maacuni' ),
+                'title'    => esc_html__( 'H2 (Heading two)', 'habib' ),
+                'subtitle' => esc_html__( 'This settings only for H2', 'habib' ),
                 'font-family' => false,
                 'google'   => false,
                 'text-align' => false,
@@ -942,8 +942,8 @@
             array(
                 'id'       => 'h3-typography',
                 'type'     => 'typography',
-                'title'    => esc_html__( 'H3 (Heading three)', 'maacuni' ),
-                'subtitle' => esc_html__( 'This settings only for H3', 'maacuni' ),
+                'title'    => esc_html__( 'H3 (Heading three)', 'habib' ),
+                'subtitle' => esc_html__( 'This settings only for H3', 'habib' ),
                 'font-family' => false,
                 'google'   => false,
                 'text-align' => false,
@@ -962,8 +962,8 @@
             array(
                 'id'       => 'h4-typography',
                 'type'     => 'typography',
-                'title'    => esc_html__( 'H4 (Heading four)', 'maacuni' ),
-                'subtitle' => esc_html__( 'This settings only for H4', 'maacuni' ),
+                'title'    => esc_html__( 'H4 (Heading four)', 'habib' ),
+                'subtitle' => esc_html__( 'This settings only for H4', 'habib' ),
                 'font-family' => false,
                 'google'   => false,
                 'text-align' => false,
@@ -982,8 +982,8 @@
             array(
                 'id'       => 'h5-typography',
                 'type'     => 'typography',
-                'title'    => esc_html__( 'H5 (Heading five)', 'maacuni' ),
-                'subtitle' => esc_html__( 'This settings only for H5', 'maacuni' ),
+                'title'    => esc_html__( 'H5 (Heading five)', 'habib' ),
+                'subtitle' => esc_html__( 'This settings only for H5', 'habib' ),
                 'font-family' => false,
                 'google'   => false,
                 'text-align' => false,
@@ -1002,8 +1002,8 @@
             array(
                 'id'       => 'h6-typography',
                 'type'     => 'typography',
-                'title'    => esc_html__( 'H6 (Heading six)', 'maacuni' ),
-                'subtitle' => esc_html__( 'This settings only for H6', 'maacuni' ),
+                'title'    => esc_html__( 'H6 (Heading six)', 'habib' ),
+                'subtitle' => esc_html__( 'This settings only for H6', 'habib' ),
                 'font-family' => false,
                 'google'   => false,
                 'text-align' => false,
@@ -1027,32 +1027,32 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-file-edit',
-        'title'  => esc_html__('Blog Settings', 'maacuni'),
+        'title'  => esc_html__('Blog Settings', 'habib'),
         'fields' => array(
 
             array(
                 'id'       => 'blog-page-header',
                 'type'     => 'switch',
-                'title'    => esc_html__('Blog page header visibility', 'maacuni'),
-                'subtitle' => esc_html__('Show/Hide page header from blog', 'maacuni'),
-                'on'       => esc_html__('Show', 'maacuni'),
-                'off'      => esc_html__('Hide', 'maacuni'),
+                'title'    => esc_html__('Blog page header visibility', 'habib'),
+                'subtitle' => esc_html__('Show/Hide page header from blog', 'habib'),
+                'on'       => esc_html__('Show', 'habib'),
+                'off'      => esc_html__('Hide', 'habib'),
                 'default'  => TRUE
             ),
 
             array(
                 'id'       => 'blog-title',
                 'type'     => 'text',
-                'title'    => esc_html__('Blog Page Title', 'maacuni'),
+                'title'    => esc_html__('Blog Page Title', 'habib'),
                 'required' => array('blog-page-header', '=', true),
-                'subtitle' => esc_html__('Enter Blog page title here, if leave blank then site title will appear', 'maacuni')
+                'subtitle' => esc_html__('Enter Blog page title here, if leave blank then site title will appear', 'habib')
             ),
 
             array(
                 'id'       => 'blog-sidebar',
                 'type'     => 'image_select',
-                'title'    => esc_html__('Blog sidebar setting', 'maacuni'),
-                'subtitle' => esc_html__('Select blog sidebar', 'maacuni'),
+                'title'    => esc_html__('Blog sidebar setting', 'habib'),
+                'subtitle' => esc_html__('Select blog sidebar', 'habib'),
                 'options'  => array(
                     'no-sidebar'    => array(
                         'alt' => 'No sidebar',
@@ -1073,8 +1073,8 @@
             array(
                 'id'       => 'single-sidebar',
                 'type'     => 'image_select',
-                'title'    => esc_html__('Blog Details sidebar setting', 'maacuni'),
-                'subtitle' => esc_html__('Select blog details sidebar layout', 'maacuni'),
+                'title'    => esc_html__('Blog Details sidebar setting', 'habib'),
+                'subtitle' => esc_html__('Select blog details sidebar layout', 'habib'),
                 'options'  => array(
                     'no-sidebar'    => array(
                         'alt' => 'No sidebar',
@@ -1095,7 +1095,7 @@
             array(
                 'id'       => 'blog-style',
                 'type'     => 'image_select',
-                'title'    => esc_html__('Blog Layout Style', 'maacuni'),
+                'title'    => esc_html__('Blog Layout Style', 'habib'),
                 'options'  => array(
                     'default'    => array(
                         'alt' => 'Default',
@@ -1112,9 +1112,9 @@
             array(
                 'id'       => 'blog-column',
                 'type'     => 'select',
-                'title'    => esc_html__('Article Per Row', 'maacuni'),
-                'subtitle' => esc_html__('Change number of article per row', 'maacuni'),
-                'desc' => esc_html__('NB. Column 3 will work when (Blog sidebar layout = No sidebar) selected.', 'maacuni'),
+                'title'    => esc_html__('Article Per Row', 'habib'),
+                'subtitle' => esc_html__('Change number of article per row', 'habib'),
+                'desc' => esc_html__('NB. Column 3 will work when (Blog sidebar layout = No sidebar) selected.', 'habib'),
                 'options'  => array(
                     '1' => 'Column 1',
                     '2' => 'Column 2',
@@ -1126,15 +1126,15 @@
             array(
                 'id'       => 'tt-post-meta',
                 'type'     => 'checkbox',
-                'title'    => esc_html__( 'Post meta options', 'maacuni' ),
-                'subtitle' => esc_html__( 'Check to show post meta', 'maacuni' ),
+                'title'    => esc_html__( 'Post meta options', 'habib' ),
+                'subtitle' => esc_html__( 'Check to show post meta', 'habib' ),
                 'options'  => array(
-                    'post-author'       => esc_html__( 'Post Author', 'maacuni' ),
-                    'author-img'       => esc_html__( 'Author Image', 'maacuni' ),
-                    'post-category'     => esc_html__( 'Post Category', 'maacuni' ),
-                    'post-date'         => esc_html__( 'Post Date', 'maacuni' ),
-                    'post-comment' => esc_html__( 'Post Comment', 'maacuni' ),
-                    'post-like' => esc_html__( 'Post Like', 'maacuni' )
+                    'post-author'       => esc_html__( 'Post Author', 'habib' ),
+                    'author-img'       => esc_html__( 'Author Image', 'habib' ),
+                    'post-category'     => esc_html__( 'Post Category', 'habib' ),
+                    'post-date'         => esc_html__( 'Post Date', 'habib' ),
+                    'post-comment' => esc_html__( 'Post Comment', 'habib' ),
+                    'post-like' => esc_html__( 'Post Like', 'habib' )
                 ),
                 'default'  => array(
                     'post-author'  => '0',
@@ -1148,15 +1148,15 @@
             array(
                 'id'       => 'tt-share-button',
                 'type'     => 'checkbox',
-                'title'    => esc_html__( 'Share button', 'maacuni' ),
-                'subtitle' => esc_html__( 'Check to show share button', 'maacuni' ),
+                'title'    => esc_html__( 'Share button', 'habib' ),
+                'subtitle' => esc_html__( 'Check to show share button', 'habib' ),
                 'options'  => array(
-                    'facebook' => esc_html__( 'Facebook', 'maacuni' ),
-                    'twitter'  => esc_html__( 'Twitter', 'maacuni' ),
-                    'google'   => esc_html__( 'Google+', 'maacuni' ),
-                    'linkedin' => esc_html__( 'Linkedin', 'maacuni' ),
-                    'pinterest' => esc_html__( 'Pinterest', 'maacuni' ),
-                    'xing' => esc_html__( 'Xing', 'maacuni' ),
+                    'facebook' => esc_html__( 'Facebook', 'habib' ),
+                    'twitter'  => esc_html__( 'Twitter', 'habib' ),
+                    'google'   => esc_html__( 'Google+', 'habib' ),
+                    'linkedin' => esc_html__( 'Linkedin', 'habib' ),
+                    'pinterest' => esc_html__( 'Pinterest', 'habib' ),
+                    'xing' => esc_html__( 'Xing', 'habib' ),
                 ),
                 'default'  => array(
                     'facebook' => '1',
@@ -1170,20 +1170,20 @@
             array(
                 'id'       => 'blog-page-nav',
                 'type'     => 'switch',
-                'title'    => esc_html__('Blog Pagination or Navigation', 'maacuni'),
-                'subtitle' => esc_html__('Blog pagination style, posts pagination or newer / older posts', 'maacuni'),
-                'on'       => esc_html__('Pagination', 'maacuni'),
-                'off'      => esc_html__('Navigation', 'maacuni'),
+                'title'    => esc_html__('Blog Pagination or Navigation', 'habib'),
+                'subtitle' => esc_html__('Blog pagination style, posts pagination or newer / older posts', 'habib'),
+                'on'       => esc_html__('Pagination', 'habib'),
+                'off'      => esc_html__('Navigation', 'habib'),
                 'default'  => TRUE
             ),
 
             array(
                 'id'       => 'blog-overlay',
                 'type'     => 'switch',
-                'title'    => esc_html__('Blog overlay visibility', 'maacuni'),
-                'subtitle' => esc_html__('You may visible or disable blog overaly', 'maacuni'),
-                'on'       => esc_html__('Visible', 'maacuni'),
-                'off'      => esc_html__('Disable', 'maacuni'),
+                'title'    => esc_html__('Blog overlay visibility', 'habib'),
+                'subtitle' => esc_html__('You may visible or disable blog overaly', 'habib'),
+                'on'       => esc_html__('Visible', 'habib'),
+                'off'      => esc_html__('Disable', 'habib'),
                 'default'  => TRUE
             ),
 
@@ -1191,10 +1191,10 @@
             array(
                 'id'       => 'blog-excerpt',
                 'type'     => 'switch',
-                'title'    => esc_html__('Show or hide blog excerpt', 'maacuni'),
-                'subtitle' => esc_html__('You may show or hide blog excerpt form you blog', 'maacuni'),
-                'on'       => esc_html__('Show', 'maacuni'),
-                'off'      => esc_html__('Hide', 'maacuni'),
+                'title'    => esc_html__('Show or hide blog excerpt', 'habib'),
+                'subtitle' => esc_html__('You may show or hide blog excerpt form you blog', 'habib'),
+                'on'       => esc_html__('Show', 'habib'),
+                'off'      => esc_html__('Hide', 'habib'),
                 'default'  => true
             ),
 
@@ -1203,35 +1203,35 @@
                 'id'    => 'info_headding',
                 'type'  => 'info',
                 'class' => 'redux-heading',
-                'title' => __('Color Settings', 'maacuni'),
+                'title' => __('Color Settings', 'habib'),
             ),
 
             array(
                 'id'       => 'blog-bg',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Blog body background color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick a color for blog body background. Default color is: #e9edf0', 'maacuni' ),
+                'title'    => esc_html__( 'Blog body background color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick a color for blog body background. Default color is: #e9edf0', 'habib' ),
             ),
 
             array(
                 'id'       => 'blog-article-bg',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Blog article background color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick a color for blog article background. Default color is #ffffff', 'maacuni' ),
+                'title'    => esc_html__( 'Blog article background color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick a color for blog article background. Default color is #ffffff', 'habib' ),
             ),
 
             array(
                 'id'       => 'blog-sidebar-bg',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Blog sidebar background color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick a color for blog sidebar background. Default color is #ffffff', 'maacuni' ),
+                'title'    => esc_html__( 'Blog sidebar background color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick a color for blog sidebar background. Default color is #ffffff', 'habib' ),
             ),
 
             array(
                 'id'       => 'blog-overlay-bg',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Blog overlay background color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick a color for blog overlay background. Default color is #f35c4c', 'maacuni' ),
+                'title'    => esc_html__( 'Blog overlay background color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick a color for blog overlay background. Default color is #f35c4c', 'habib' ),
             ),
 
         )
@@ -1243,14 +1243,14 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-file-edit',
-        'title'  => esc_html__('Page Settings', 'maacuni'),
+        'title'  => esc_html__('Page Settings', 'habib'),
         'fields' => array(
 
             array(
                 'id'       => 'page-sidebar',
                 'type'     => 'image_select',
-                'title'    => esc_html__('Page Sidebar', 'maacuni'),
-                'subtitle' => esc_html__('Select page sidebar', 'maacuni'),
+                'title'    => esc_html__('Page Sidebar', 'habib'),
+                'subtitle' => esc_html__('Select page sidebar', 'habib'),
                 'options'  => array(
                     'no-sidebar'    => array(
                         'alt' => 'No sidebar',
@@ -1276,41 +1276,41 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el el-camera',
-        'title'  => esc_html__('Portfolio Settings', 'maacuni'),
+        'title'  => esc_html__('Portfolio Settings', 'habib'),
         'fields' => array(
 
             array(
                 'id'       => 'tools_we_used_text',
                 'type'     => 'text',
-                'title'    => esc_html__('Tools we used', 'maacuni'),
-                'default' => esc_html__('Tools we used', 'maacuni'),
-                'subtitle' => esc_html__('You may change Tools we used', 'maacuni')
+                'title'    => esc_html__('Tools we used', 'habib'),
+                'default' => esc_html__('Tools we used', 'habib'),
+                'subtitle' => esc_html__('You may change Tools we used', 'habib')
             ),
 
             array(
                 'id'       => 'next_portfolio_visibility',
                 'type'     => 'switch',
-                'title'    => esc_html__('Show or Hide Next Post Link', 'maacuni'),
-                'subtitle' => esc_html__('You may visible or disable next post link form portfolio details page.', 'maacuni'),
-                'on'       => esc_html__('Visible', 'maacuni'),
-                'off'      => esc_html__('Disable', 'maacuni'),
+                'title'    => esc_html__('Show or Hide Next Post Link', 'habib'),
+                'subtitle' => esc_html__('You may visible or disable next post link form portfolio details page.', 'habib'),
+                'on'       => esc_html__('Visible', 'habib'),
+                'off'      => esc_html__('Disable', 'habib'),
                 'default'  => TRUE
             ),
 
             array(
                 'id'       => 'what_next_title',
                 'type'     => 'text',
-                'title'    => esc_html__('What\'s next Text', 'maacuni'),
-                'default' => esc_html__('What\'s next', 'maacuni'),
-                'subtitle' => esc_html__('You may change what\'s next Text', 'maacuni'),
+                'title'    => esc_html__('What\'s next Text', 'habib'),
+                'default' => esc_html__('What\'s next', 'habib'),
+                'subtitle' => esc_html__('You may change what\'s next Text', 'habib'),
                 'required' => array('next_portfolio_visibility', '=', '1'),
             ),
 
             array(
                 'id'       => 'next_font_color',
                 'type'     => 'color',
-                'title'    => esc_html__( 'Font Color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for font color, default color is #ffffff.', 'maacuni' ),
+                'title'    => esc_html__( 'Font Color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for font color, default color is #ffffff.', 'habib' ),
                 'required' => array('next_portfolio_visibility', '=', '1'),
             )
         )
@@ -1323,14 +1323,14 @@
     if (class_exists('WooCommerce')) :
         Redux::setSection( $opt_name, array(
             'icon'   => 'el-icon-shopping-cart',
-            'title'  => esc_html__('Shop Settings', 'maacuni'),
+            'title'  => esc_html__('Shop Settings', 'habib'),
             'fields' => array(
 
                 array(
                     'id'       => 'shop-sidebar',
                     'type'     => 'image_select',
-                    'title'    => esc_html__('Shop Sidebar', 'maacuni'),
-                    'subtitle' => esc_html__('Select shop sidebar', 'maacuni'),
+                    'title'    => esc_html__('Shop Sidebar', 'habib'),
+                    'subtitle' => esc_html__('Select shop sidebar', 'habib'),
                     'options'  => array(
                         'no-sidebar'    => array(
                             'alt' => 'No sidebar',
@@ -1351,26 +1351,26 @@
                 array(
                     'id'       => 'shopping-cart-visibility',
                     'type'     => 'switch',
-                    'title'    => esc_html__('Shopping cart visibility', 'maacuni'),
-                    'subtitle' => esc_html__('Show or hide shopping cart icon from navigation', 'maacuni'),
-                    'on'       => esc_html__('Show', 'maacuni'),
-                    'off'      => esc_html__('Hide', 'maacuni'),
+                    'title'    => esc_html__('Shopping cart visibility', 'habib'),
+                    'subtitle' => esc_html__('Show or hide shopping cart icon from navigation', 'habib'),
+                    'on'       => esc_html__('Show', 'habib'),
+                    'off'      => esc_html__('Hide', 'habib'),
                     'default'  => false,
                 ),
 
                 array(
                     'id'       => 'product-per-page',
                     'type'     => 'text',
-                    'title'    => esc_html__('Product per page', 'maacuni'),
-                    'subtitle' => esc_html__('Change number of products per page', 'maacuni'),
+                    'title'    => esc_html__('Product per page', 'habib'),
+                    'subtitle' => esc_html__('Change number of products per page', 'habib'),
                     'default'  => '6'
                 ),
 
                 array(
                     'id'       => 'product-column',
                     'type'     => 'select',
-                    'title'    => esc_html__('Product per row', 'maacuni'),
-                    'subtitle' => esc_html__('Change number of products per row', 'maacuni'),
+                    'title'    => esc_html__('Product per row', 'habib'),
+                    'subtitle' => esc_html__('Change number of products per row', 'habib'),
                     'options'  => array(
                         '2' => 'Column 2',
                         '3' => 'Column 3',
@@ -1388,15 +1388,15 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-repeat-alt',
-        'title'  => esc_html__('Preloader Settings', 'maacuni'),
+        'title'  => esc_html__('Preloader Settings', 'habib'),
         'fields' => array(
             array(
                 'id'       => 'page-preloader',
                 'type'     => 'switch',
-                'title'    => esc_html__('Page Preloader', 'maacuni'),
-                'subtitle' => esc_html__('You can enable or disable page preloader from here.', 'maacuni'),
-                'on'       => esc_html__('Enable', 'maacuni'),
-                'off'      => esc_html__('Disable', 'maacuni'),
+                'title'    => esc_html__('Page Preloader', 'habib'),
+                'subtitle' => esc_html__('You can enable or disable page preloader from here.', 'habib'),
+                'on'       => esc_html__('Enable', 'habib'),
+                'off'      => esc_html__('Disable', 'habib'),
                 'default'  => TRUE,
             ),
 
@@ -1404,8 +1404,8 @@
                 'id'       => 'loader-bg-color',
                 'type'     => 'color',
                 'required' => array( 'page-preloader', '=', '1' ),
-                'title'    => esc_html__( 'Preloader background color', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color for preloader background (default: #ffffff).', 'maacuni' ),
+                'title'    => esc_html__( 'Preloader background color', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color for preloader background (default: #ffffff).', 'habib' ),
                 'default'  => '#ffffff',
             ),
 
@@ -1413,8 +1413,8 @@
                 'id'       => 'preloader-slider-bg',
                 'type'     => 'color',
                 'required' => array( 'page-preloader', '=', '1' ),
-                'title'    => esc_html__( 'Preloader slide BG', 'maacuni' ),
-                'subtitle' => esc_html__( 'Select preloader slide background. Default color is: #101a87', 'maacuni' ),
+                'title'    => esc_html__( 'Preloader slide BG', 'habib' ),
+                'subtitle' => esc_html__( 'Select preloader slide background. Default color is: #101a87', 'habib' ),
             )
         )
     ));
@@ -1425,22 +1425,22 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-repeat-alt',
-        'title'  => esc_html__('404 Settings', 'maacuni'),
+        'title'  => esc_html__('404 Settings', 'habib'),
         'fields' => array(
 
             array(
                 'id'       => 'page404-bg',
                 'type'     => 'select',
-                'title'    => esc_html__('404 background', 'maacuni'),
-                'subtitle' => esc_html__('Choose 404 page background', 'maacuni'),
+                'title'    => esc_html__('404 background', 'habib'),
+                'subtitle' => esc_html__('Choose 404 page background', 'habib'),
                 'options'  => array(
-                    'default' => esc_html__('Default', 'maacuni'),
-                    'dark-404' => esc_html__('Dark Background', 'maacuni'),
-                    'blue-404' => esc_html__('Blue Background', 'maacuni'),
-                    'blue-light-404' => esc_html__('Blue-light Background', 'maacuni'),
-                    'white-404' => esc_html__('White Background', 'maacuni'),
-                    'off-white-404' => esc_html__('Off-white Background', 'maacuni'),
-                    'theme-404' => esc_html__('Theme Background', 'maacuni'),
+                    'default' => esc_html__('Default', 'habib'),
+                    'dark-404' => esc_html__('Dark Background', 'habib'),
+                    'blue-404' => esc_html__('Blue Background', 'habib'),
+                    'blue-light-404' => esc_html__('Blue-light Background', 'habib'),
+                    'white-404' => esc_html__('White Background', 'habib'),
+                    'off-white-404' => esc_html__('Off-white Background', 'habib'),
+                    'theme-404' => esc_html__('Theme Background', 'habib'),
                 ),
                 'default' => 'default'
             ),
@@ -1450,8 +1450,8 @@
                 'id'       => 'img-404',
                 'type'     => 'media',
                 'preview'  => 'true',
-                'title'    => esc_html__('404 Image', 'maacuni'),
-                'subtitle' => esc_html__('Upload 404 png image from media library.', 'maacuni')
+                'title'    => esc_html__('404 Image', 'habib'),
+                'subtitle' => esc_html__('Upload 404 png image from media library.', 'habib')
             ),
         )
     ));
@@ -1462,30 +1462,30 @@
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Redux::setSection( $opt_name, array(
         'icon'   => 'el-icon-photo',
-        'title'  => esc_html__('Footer Settings', 'maacuni'),
+        'title'  => esc_html__('Footer Settings', 'habib'),
         'fields' => array(
 
             // footer style
             array(
                 'id'       => 'footer-style',
                 'type'     => 'image_select',
-                'title'    => esc_html__( 'Footer styles', 'maacuni' ),
-                'subtitle' => esc_html__( 'Select Footer Style.', 'maacuni' ),
+                'title'    => esc_html__( 'Footer styles', 'habib' ),
+                'subtitle' => esc_html__( 'Select Footer Style.', 'habib' ),
                 'options'  => array(
                     'footer-multipage'   => array(
-                        'alt' => esc_html__('Footer multipage', 'maacuni'),
+                        'alt' => esc_html__('Footer multipage', 'habib'),
                         'img' => get_template_directory_uri() . '/images/footer-multipage.jpg'
                     ),
                     'footer-onepage'   => array(
-                        'alt' => esc_html__('Footer onepage', 'maacuni'),
+                        'alt' => esc_html__('Footer onepage', 'habib'),
                         'img' => get_template_directory_uri() . '/images/footer-onepage.jpg'
                     ),
                     'footer-copyright'   => array(
-                        'alt' => esc_html__('Footer copyright', 'maacuni'),
+                        'alt' => esc_html__('Footer copyright', 'habib'),
                         'img' => get_template_directory_uri() . '/images/footer-copyright.jpg'
                     ),
                     'no-footer'   => array(
-                        'alt' => esc_html__('No Footer', 'maacuni'),
+                        'alt' => esc_html__('No Footer', 'habib'),
                         'img' => get_template_directory_uri() . '/images/no-footer.jpg'
                     )
                 ),
@@ -1497,16 +1497,16 @@
                 'type'     => 'media',
                 'preview'  => 'true',
                 'required' => array('footer-style', '=', array('footer-onepage')),
-                'title'    => esc_html__('Footer Logo.', 'maacuni'),
-                'subtitle' => esc_html__('Change footer logo dimension: 150px &times; 30px', 'maacuni')
+                'title'    => esc_html__('Footer Logo.', 'habib'),
+                'subtitle' => esc_html__('Change footer logo dimension: 150px &times; 30px', 'habib')
             ),
 
             array(
                 'id'       => 'footer-two-title',
                 'type'     => 'text',
                 'required' => array('footer-style', '=', array('footer-onepage')),
-                'title'    => esc_html__('Onepage Footer Title', 'maacuni'),
-                'subtitle' => esc_html__('Write onepage footer title here.', 'maacuni'), 
+                'title'    => esc_html__('Onepage Footer Title', 'habib'),
+                'subtitle' => esc_html__('Write onepage footer title here.', 'habib'),
                 'default'   => 'Marconi Digital Agency'
             ),
 
@@ -1514,8 +1514,8 @@
                 'id'       => 'footer-two-text',
                 'type'     => 'editor',
                 'required' => array('footer-style', '=', array('footer-onepage')),
-                'title'    => esc_html__('Onepage Footer Text', 'maacuni'),
-                'subtitle' => esc_html__('Write onepage footer text here.', 'maacuni'),
+                'title'    => esc_html__('Onepage Footer Text', 'habib'),
+                'subtitle' => esc_html__('Write onepage footer text here.', 'habib'),
                 'default'   => 'Intrinsicly enable standards compliant manufactured products vis-a-vis transparent opportunities. Assertively network enabled process improvements vis-a-vis compelling markets. Interactively iterate sticky iterate .'
             ),
 
@@ -1523,9 +1523,9 @@
                 'id'       => 'footer-copyright-year',
                 'type'     => 'text',
                 'required' => array('footer-style', '=', array('footer-onepage', 'footer-copyright')),
-                'title'    => esc_html__('Copyright Year', 'maacuni'),
+                'title'    => esc_html__('Copyright Year', 'habib'),
                 'default'   => date('Y'),
-                'subtitle' => esc_html__('Enter copyright year. e.g. 2019', 'maacuni')
+                'subtitle' => esc_html__('Enter copyright year. e.g. 2019', 'habib')
             ),
 
             // footer background color
@@ -1534,21 +1534,21 @@
                 'id'       => 'background-option',
                 'type'     => 'select',
                 'required' => array('footer-style', '=', array('footer-onepage')),
-                'title'    => esc_html__('Select Background Options', 'maacuni'),
+                'title'    => esc_html__('Select Background Options', 'habib'),
                 'options'  => array(
                     'one-color-bg' => 'One Color Background',
                     'gradient-bg' => 'Gradient Background',
                 ),
                 'default'  => 'gradient-bg',
-                'subtitle' => esc_html__('Select background options', 'maacuni'),
+                'subtitle' => esc_html__('Select background options', 'habib'),
             ),
 
             array(
                 'id'       => 'onepage-footer-bg',
                 'type'     => 'color',
                 'required' => array('background-option', '=', array('one-color-bg')),
-                'title'    => esc_html__( 'Footer Background', 'maacuni' ),
-                'subtitle' => esc_html__( 'Pick color as footer background.', 'maacuni' ),
+                'title'    => esc_html__( 'Footer Background', 'habib' ),
+                'subtitle' => esc_html__( 'Pick color as footer background.', 'habib' ),
                 'default'  => '#f7872c'
             ),
 
@@ -1556,8 +1556,8 @@
                 'id'       => 'onepage-footer-gradient',
                 'type'     => 'color',
                 'required' => array('background-option', '=', array('gradient-bg')),
-                'title'    => esc_html__( 'Footer Gradient One', 'maacuni' ),
-                'subtitle' => esc_html__( 'Choose first footer gradient color.', 'maacuni' ), 
+                'title'    => esc_html__( 'Footer Gradient One', 'habib' ),
+                'subtitle' => esc_html__( 'Choose first footer gradient color.', 'habib' ),
                 'default'  => '#f7872c'
             ),
 
@@ -1565,8 +1565,8 @@
                 'id'       => 'onepage-footer-gradient2',
                 'type'     => 'color',
                 'required' => array('background-option', '=', array('gradient-bg')),
-                'title'    => esc_html__( 'Footer Gradient Two', 'maacuni' ),
-                'subtitle' => esc_html__( 'Choose second footer gradient color.', 'maacuni' ),
+                'title'    => esc_html__( 'Footer Gradient Two', 'habib' ),
+                'subtitle' => esc_html__( 'Choose second footer gradient color.', 'habib' ),
                 'default'  => '#f15f46'
             ),
 
@@ -1574,25 +1574,25 @@
                 'id'       => 'footer-copyright-bg',
                 'type'     => 'color',
                 'required' => array('footer-style', '=', array('footer-multipage', 'footer-onepage', 'footer-copyright')),
-                'title'    => esc_html__( 'Footer Copyright Background', 'maacuni' ),
-                'subtitle' => esc_html__( 'You can change footer copyright background color', 'maacuni' ),
+                'title'    => esc_html__( 'Footer Copyright Background', 'habib' ),
+                'subtitle' => esc_html__( 'You can change footer copyright background color', 'habib' ),
             ),
 
             array(
                 'id'       => 'footer-copyright-color',
                 'type'     => 'color',
                 'required' => array('footer-style', '=', array('footer-multipage', 'footer-onepage', 'footer-copyright')),
-                'title'    => esc_html__( 'Footer Copyright Font Color', 'maacuni' ),
-                'subtitle' => esc_html__( 'You can change footer copyright font color', 'maacuni' ),
+                'title'    => esc_html__( 'Footer Copyright Font Color', 'habib' ),
+                'subtitle' => esc_html__( 'You can change footer copyright font color', 'habib' ),
             ),
 
             array(
                 'id'       => 'social-icon-visibility',
                 'type'     => 'switch',
-                'title'    => esc_html__('Social icon visibility', 'maacuni'),
-                'subtitle' => esc_html__('Shor or hide social icon from footer', 'maacuni'),
-                'on'       => esc_html__('Show', 'maacuni'),
-                'off'      => esc_html__('Hide', 'maacuni'),
+                'title'    => esc_html__('Social icon visibility', 'habib'),
+                'subtitle' => esc_html__('Shor or hide social icon from footer', 'habib'),
+                'on'       => esc_html__('Show', 'habib'),
+                'off'      => esc_html__('Hide', 'habib'),
                 'default'  => FALSE,
             ),
             
@@ -1600,78 +1600,78 @@
                 'id'       => 'facebook-link',
                 'type'     => 'text',
                 'required' => array('social-icon-visibility', '=', '1'),
-                'title'    => esc_html__('Facebook Link', 'maacuni'),
-                'subtitle' => esc_html__('Enter facebook page or profile link. Leave blank to hide icon.', 'maacuni'),
+                'title'    => esc_html__('Facebook Link', 'habib'),
+                'subtitle' => esc_html__('Enter facebook page or profile link. Leave blank to hide icon.', 'habib'),
             ),
             array(
                 'id'       => 'twitter-link',
                 'type'     => 'text',
                 'required' => array('social-icon-visibility', '=', '1'),
-                'title'    => esc_html__('Twitter Link', 'maacuni'),
-                'subtitle' => esc_html__('Enter twitter link. Leave blank to hide icon.', 'maacuni'),
+                'title'    => esc_html__('Twitter Link', 'habib'),
+                'subtitle' => esc_html__('Enter twitter link. Leave blank to hide icon.', 'habib'),
             ),
             array(
                 'id'       => 'youtube-link',
                 'type'     => 'text',
                 'required' => array('social-icon-visibility', '=', '1'),
-                'title'    => esc_html__('Youtube Link', 'maacuni'),
-                'subtitle' => esc_html__('Enter youtube chanel link. Leave blank to hide icon.', 'maacuni'),
+                'title'    => esc_html__('Youtube Link', 'habib'),
+                'subtitle' => esc_html__('Enter youtube chanel link. Leave blank to hide icon.', 'habib'),
             ),
             array(
                 'id'       => 'pinterest-link',
                 'type'     => 'text',
                 'required' => array('social-icon-visibility', '=', '1'),
-                'title'    => esc_html__('Pinterest Link', 'maacuni'),
-                'subtitle' => esc_html__('Enter pinterest link. Leave blank to hide icon.', 'maacuni'),
+                'title'    => esc_html__('Pinterest Link', 'habib'),
+                'subtitle' => esc_html__('Enter pinterest link. Leave blank to hide icon.', 'habib'),
             ),
             array(
                 'id'       => 'flickr-link',
                 'type'     => 'text',
                 'required' => array('social-icon-visibility', '=', '1'),
-                'title'    => esc_html__('Flickr Link', 'maacuni'),
-                'subtitle' => esc_html__('Enter flicker link. Leave blank to hide icon.', 'maacuni'),
+                'title'    => esc_html__('Flickr Link', 'habib'),
+                'subtitle' => esc_html__('Enter flicker link. Leave blank to hide icon.', 'habib'),
             ),
             array(
                 'id'       => 'linkedin-link',
                 'type'     => 'text',
                 'required' => array('social-icon-visibility', '=', '1'),
-                'title'    => esc_html__('Linkedin Link', 'maacuni'),
-                'subtitle' => esc_html__('Enter linkedin profile link. Leave blank to hide icon.', 'maacuni'),
+                'title'    => esc_html__('Linkedin Link', 'habib'),
+                'subtitle' => esc_html__('Enter linkedin profile link. Leave blank to hide icon.', 'habib'),
             ),
             array(
                 'id'       => 'vimeo-link',
                 'type'     => 'text',
                 'required' => array('social-icon-visibility', '=', '1'),
-                'title'    => esc_html__('Vimeo Link', 'maacuni'),
-                'subtitle' => esc_html__('Enter vimeo chanel link. Leave blank to hide icon.', 'maacuni'),
+                'title'    => esc_html__('Vimeo Link', 'habib'),
+                'subtitle' => esc_html__('Enter vimeo chanel link. Leave blank to hide icon.', 'habib'),
             ),
             array(
                 'id'       => 'instagram-link',
                 'type'     => 'text',
                 'required' => array('social-icon-visibility', '=', '1'),
-                'title'    => esc_html__('Instagram Link', 'maacuni'),
-                'subtitle' => esc_html__('Enter instagram page or profile link. Leave blank to hide icon.', 'maacuni'),
+                'title'    => esc_html__('Instagram Link', 'habib'),
+                'subtitle' => esc_html__('Enter instagram page or profile link. Leave blank to hide icon.', 'habib'),
             ),
             array(
                 'id'       => 'dribbble-link',
                 'type'     => 'text',
                 'required' => array('social-icon-visibility', '=', '1'),
-                'title'    => esc_html__('Dribbble Link', 'maacuni'),
-                'subtitle' => esc_html__('Enter dribbble profile link. Leave blank to hide icon.', 'maacuni'),
+                'title'    => esc_html__('Dribbble Link', 'habib'),
+                'subtitle' => esc_html__('Enter dribbble profile link. Leave blank to hide icon.', 'habib'),
             ),
             array(
                 'id'       => 'behance-link',
                 'type'     => 'text',
                 'required' => array('social-icon-visibility', '=', '1'),
-                'title'    => esc_html__('Behance Link', 'maacuni'),
-                'subtitle' => esc_html__('Enter behance profile link. Leave blank to hide icon.', 'maacuni'),
+                'title'    => esc_html__('Behance Link', 'habib'),
+                'subtitle' => esc_html__('Enter behance profile link. Leave blank to hide icon.', 'habib'),
             ),
 
             array(
                 'id'       => 'footer-text',
                 'type'     => 'editor',
-                'title'    => esc_html__('Footer Copyright Text', 'maacuni'),
-                'subtitle' => esc_html__('Write footer copyright text here.', 'maacuni')
+                'title'    => esc_html__('Footer Copyright Text', 'habib'),
+                'subtitle' => esc_html__('Write footer copyright text here.', 'habib')
             )
         )
     ));

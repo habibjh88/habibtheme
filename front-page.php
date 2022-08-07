@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) :
     exit; // Exit if accessed directly
 endif;
 
-get_header('two');
+get_header();
 
 ?>
     <div class="main-wrapper">
@@ -20,7 +20,6 @@ get_header('two');
                         'container' => false,
                         'theme_location' => 'primary',
                         'items_wrap' => '<ul id="%1$s" class="%2$s nav navbar-nav">%3$s</ul>',
-                        'walker' => new habib_Navwalker(),
                         'fallback_cb' => false
                     ))); ?>
 

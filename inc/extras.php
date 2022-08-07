@@ -72,7 +72,7 @@ if ( ! function_exists( 'habib_body_classes' ) ) :
 		$single_sidebar = habib_option('single-sidebar', false, 'right-sidebar');
 		$header_sticky = habib_option('sticky-menu-visibility', false, true);
 
-		if($single_sidebar != 'no-sidebar' && is_active_sidebar('maacuni-blog-sidebar')  && is_single()){
+		if($single_sidebar != 'no-sidebar' && is_active_sidebar('habib-blog-sidebar')  && is_single()){
 			$classes[ ] = 'has-single-sidebar';
 		}
 
@@ -289,7 +289,7 @@ endif;
 if (! function_exists('habib_header_add_to_cart_fragment')) :
     function habib_header_add_to_cart_fragment( $fragments ) {
         ob_start(); ?>
-        <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'maacuni' ); ?>"><i class="fas fa-shopping-basket"></i><span class="cart-count"><?php echo intval(WC()->cart->get_cart_contents_count()); ?></span></a>
+        <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'habib' ); ?>"><i class="fas fa-shopping-basket"></i><span class="cart-count"><?php echo intval(WC()->cart->get_cart_contents_count()); ?></span></a>
         <?php
         $fragments['a.cart-contents'] = ob_get_clean();
         return $fragments;
@@ -330,7 +330,7 @@ if (! function_exists('habib_shop_sidebar')) {
 if (! function_exists('habib_product_quick_view')) :
 	function habib_product_quick_view() {
 	    if(empty($_POST['prodid'])) {
-	        echo esc_html__('Error: Absent product id', 'maacuni');
+	        echo esc_html__('Error: Absent product id', 'habib');
 	        die();
 	    }
 
@@ -348,7 +348,7 @@ if (! function_exists('habib_product_quick_view')) :
 	        endwhile;
 	        wp_reset_postdata();
 	    } else {
-	        echo esc_html__('No product were found!', 'maacuni');
+	        echo esc_html__('No product were found!', 'habib');
 	    }
 	    die();
 	}
@@ -364,7 +364,7 @@ endif;
 if ( ! function_exists( 'habib_before_cart_div' ) ):
 
     function habib_before_cart_div( ) {
-        echo '<div class="maacuni-shop maacuni-cart">';
+        echo '<div class="habib-shop habib-cart">';
     }
 
     add_action( 'woocommerce_before_cart', 'habib_before_cart_div' );
@@ -392,7 +392,7 @@ if (! function_exists('habib_excerpt_more')) :
 		echo esc_html(get_the_excerpt());
 	    return sprintf( '<a class="more-link" href="%1$s">%2$s</a>',
 	        get_permalink( get_the_ID() ),
-	        esc_html__( 'Read More', 'maacuni' )
+	        esc_html__( 'Read More', 'habib' )
 	    );
 	}
 	add_filter( 'the_excerpt', 'habib_excerpt_more' );

@@ -9,10 +9,10 @@ get_header();
 	$grid_column = 'col-12';
 	
 	if ($blog_sidebar != 'no-sidebar') :
-		$grid_column = (is_active_sidebar('maacuni-blog-sidebar')) ? 'col-md-12 col-lg-8' : $grid_column;
+		$grid_column = (is_active_sidebar('habib-blog-sidebar')) ? 'col-md-12 col-lg-8' : $grid_column;
 	endif;
 
-	if(($blog_sidebar == 'no-sidebar' || ! is_active_sidebar('maacuni-blog-sidebar')) && $blog_column == 1) {
+	if(($blog_sidebar == 'no-sidebar' || ! is_active_sidebar('habib-blog-sidebar')) && $blog_column == 1) {
 		$grid_column = 'col-lg-10 offset-lg-1';
 	}
 ?>
@@ -30,9 +30,9 @@ get_header();
 								while ( have_posts() ) : the_post(); 
 
 										$blog_layout = "";
-										if( ($blog_column == 2) || ($blog_column == 3 && $blog_sidebar != 'no-sidebar' && is_active_sidebar('maacuni-blog-sidebar')) ){
+										if( ($blog_column == 2) || ($blog_column == 3 && $blog_sidebar != 'no-sidebar' && is_active_sidebar('habib-blog-sidebar')) ){
 											$blog_layout = 'col-md-6 col-lg-6 col-12 masonry-column';
-										} elseif($blog_column == 3 && ($blog_sidebar == 'no-sidebar' || !is_active_sidebar('maacuni-blog-sidebar'))){
+										} elseif($blog_column == 3 && ($blog_sidebar == 'no-sidebar' || !is_active_sidebar('habib-blog-sidebar'))){
 											$blog_layout = 'col-md-6 col-lg-4 col-12 masonry-column';
 										} else{
 											$blog_layout = 'col-md-12 ';

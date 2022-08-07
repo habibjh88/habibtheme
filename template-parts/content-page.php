@@ -5,9 +5,9 @@ endif; ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('page-content'); ?>>
 
 	<div class="entry-content">
-		<?php the_content( '<span class="readmore">' . esc_html__( 'Read More', 'maacuni' ) . '</span>' );
+		<?php the_content( '<span class="readmore">' . esc_html__( 'Read More', 'habib' ) . '</span>' );
 			wp_link_pages(array(
-	            'before'      => '<div class="page-pagination"><span class="page-links-title">' . esc_html__('Pages:', 'maacuni') . '</span>',
+	            'before'      => '<div class="page-pagination"><span class="page-links-title">' . esc_html__('Pages:', 'habib') . '</span>',
 	            'after'       => '</div>',
 	            'link_before' => '<span>',
 	            'link_after'  => '</span>',

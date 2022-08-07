@@ -34,8 +34,5 @@ if ( !function_exists('habib_option')) :
 
 endif;
 
-// Load the TGM init if it exists
-require get_template_directory() . "/required-plugins/index.php";
-
 // Load the themes options
 require get_template_directory() . "/admin/theme-options-config.php";
